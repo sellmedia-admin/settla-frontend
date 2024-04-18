@@ -1,6 +1,6 @@
 import bullet from "../../assets/svg/bullet.svg";
 import { Link } from "react-router-dom";
-import mondu from "../../assets/png/mondu.png";
+import { imgs } from "../../helpers/constants";
 
 const OnboardingLayout = ({ title, children }) => {
 	return (
@@ -10,13 +10,14 @@ const OnboardingLayout = ({ title, children }) => {
 					<div className="flex-col hidden h-full p-12 md:flex">
 						<h4 className="p-8 md:p-0">
 							<Link to="/">
-								<img alt="cover" src={mondu} width={80} height={80} />
+								<img alt="cover" src={imgs.logo} />
 							</Link>
 						</h4>
 						<div className="flex flex-col justify-center h-[calc(100vh-6rem-80px)]">
 							<div className="max-w-md xl:max-w-2xl">
 								<h2 className="text-2xl text-grey-dark xl:text-5xl xl:leading-relaxed">
-									A <span className="text-secondary">secure and seamless</span> cross-border payment solution
+									Powering Efficient B2B Remittance & Procurement Globally
+									{/* A <span className="text-secondary">secure and seamless</span> cross-border payment solution */}
 								</h2>
 							</div>
 							<div className="max-w-lg mt-12">

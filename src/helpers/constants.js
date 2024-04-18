@@ -1,3 +1,17 @@
+import logo from "../assets/images/svg/settla-logo.svg";
+import store from "../assets/images/jpg/store-smile-settla.jpg";
+import usd from "../assets/images/png/usd.png";
+import gbp from "../assets/images/png/gbp.png";
+import eur from "../assets/images/png/eur.png";
+import cad from "../assets/images/png/cad.png";
+import yen from "../assets/images/png/yen.png";
+import createAccount from "../assets/images/svg/icons/user-add.svg";
+import quick from "../assets/images/svg/icons/shield.svg";
+import payIn from "../assets/images/svg/icons/pay-in.svg";
+import payOut from "../assets/images/svg/icons/pay-out.svg";
+import conversion from "../assets/images/svg/icons/refresh.svg";
+import receipt from "../assets/images/svg/icons/document.svg";
+
 import nigeria from "../assets/svg/nigeria.svg";
 import usa from "../assets/svg/usa.svg";
 import canada from "../assets/svg/canada.svg";
@@ -6,6 +20,27 @@ import payment from "../assets/svg/home/payment.svg";
 import receive from "../assets/svg/home/receive.svg";
 import europe from "../assets/svg/home/europe.svg";
 import retail from "../assets/svg/home/retail.svg";
+
+export const imgs = {
+	logo: logo,
+	store: store,
+	createAccount: createAccount,
+	quick: quick,
+	payIn: payIn,
+	payOut: payOut,
+	conversion: conversion,
+	receipt: receipt,
+};
+
+export const constants = {
+	converts: [
+		{id: 1, currency: 'USD', icon: usd},
+		{id: 1, currency: 'GBP', icon: gbp},
+		{id: 1, currency: 'EUR', icon: eur},
+		{id: 1, currency: 'CAD', icon: cad},
+		{id: 1, currency: 'YEN', icon: yen},
+	]
+};
 
 export const flags = {
 	NGN: {

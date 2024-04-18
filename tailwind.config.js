@@ -3,6 +3,7 @@ module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		fontFamily: {
+			outfit: ["Outfit"],
 			sans: ["Euclid Circular A", "-apple-system", "BlinkMacSystemFont"],
 			serif: ["Euclid Circular A", "Georgia", "Cambria", "serif"],
 			mono: ["Euclid Circular A", "SFMono-Regular", "Menlo", "mono"],
@@ -10,7 +11,7 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				primary: "#00BCB0",
+				primary: "#16A887",
 				secondary: "#5630FF",
 				darkGray: "#333333",
 
@@ -52,6 +53,9 @@ module.exports = {
 			backgroundPosition: {
 				"right-95": "95%",
 			},
+			borderRadius: {
+				8: "8px",
+			}
 		},
 	},
 	plugins: [],

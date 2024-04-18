@@ -4,6 +4,10 @@
 
 @layer base {
 	@font-face {
+		font-family: 'Outfit', sans-serif;
+		src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+	}
+	@font-face {
 		font-family: "Euclid Circular A";
 		font-weight: 300;
 		src: url("./assets/font/EuclidCircularA-Light.ttf");
@@ -32,19 +36,22 @@
 
 @layer components {
 	h1 {
-		@apply font-semibold text-4xl;
+		@apply font-medium text-[40px] md:text-[60px] font-outfit leading-10 md:leading-[76px];
 	}
 	h2 {
-		@apply font-semibold text-2xl text-grey-dark;
+		@apply font-semibold text-[34px] md:text-[44px] leading-9 md:leading-[55px] text-black font-outfit;
 	}
 	h3 {
-		@apply font-semibold text-xl;
+		@apply font-semibold text-3xl font-outfit;
+	}
+	h4 {
+		@apply font-semibold text-xl font-outfit;
 	}
 	p {
-		@apply text-grey-dark text-sm;
+		@apply text-black text-[14px] md:text-[18px] font-outfit;
 	}
 }
 
 :root {
-	--primary: #00bcb0;
+	--primary: #16A887;
 }

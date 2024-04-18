@@ -1,123 +1,214 @@
 import { Disclosure, Transition } from "@headlessui/react";
-import mondu from "../assets/png/mondu.png";
 import toggle from "../assets/svg/home/toggle.svg";
 import add from "../assets/svg/home/add.svg";
 import minus from "../assets/svg/home/minus.svg";
 import usa from "../assets/svg/home/usa-card.svg";
 import naija from "../assets/svg/home/naija-card.svg";
 import canada from "../assets/svg/home/canada-card.svg";
-import hero from "../assets/png/hero.png";
 import beneficiary from "../assets/png/beneficiary.png";
 import transaction_history from "../assets/png/transaction_history.png";
 
 import { million_things, questions } from "../helpers/constants";
 import StepOne from "../components/transactions/sendmoney/StepOne";
-import TextInput from "../components/inputs/TextInput";
+// import TextInput from "../components/inputs/TextInput";
 import { useState } from "react";
-import { CgSpinner } from "react-icons/cg";
+// import { CgSpinner } from "react-icons/cg";
 import EmailSuccessModal from "../components/success/Email";
+import { Link } from 'react-router-dom';
+
+// constant 
+import { imgs, constants } from "../helpers/constants";
 
 export default function Home() {
-	const [email, setEmail] = useState("");
-	const [
-		loading,
-		//  setLoading
-	] = useState(false);
 	const [modalStatus, setModalStatus] = useState(false);
-
-	const handleWaitingList = async () => {
-		// setLoading(true);
-		// try {
-		//	if (!!email) {
-		//		const res = await earlyAccess(email);
-		//		if (res.type === "success") setModalStatus(true);
-		//		setEmail("");
-		//	}
-		// } catch (error) {
-		//	console.log(error);
-		// }
-		// setLoading(false);
-	};
-
-	const focusOnInput = () => {
-		document.getElementById("emailID").focus();
-	};
-
 	const handleModalStatus = () => {
 		setModalStatus(false);
 	};
 
 	return (
-		<>
-			<nav className="flex items-center justify-between px-12 py-5 bg-white md:px-24">
+		<div className="font-outfit">
+			<nav className="flex items-center justify-between px-12 py-6 bg-white md:px-24">
 				<div className="flex space-x-2">
-					<img alt="cover" src={mondu} width={80} height={80} />
+					<img alt="logo" src={imgs.logo} />
 				</div>
-				<div className="flex gap-2">
-					<button
-						onClick={focusOnInput}
-						className="px-3 py-2 border border-gray-100 rounded-lg text-darkGray bg-blue-ocean max-[550px]:hidden"
-					>
-						Contact us
-					</button>
-					{/* <Link to="/signup" className="px-3 py-2 text-white border border-gray-100 rounded bg-primary">
-						Register
-					</Link>
-					<Link to="/login" className="px-3 py-2 text-white border border-gray-100 rounded bg-primary">
+				<div className="flex items-center text-[16px] gap-2">
+					<Link to="/" className="px-2">Features</Link>
+					<Link to="/" className="px-2">Pricing</Link>
+					<Link to="/" className="px-2">Company</Link>
+					<Link to="/" className="px-2">Blog</Link>
+					<Link to="/" className="px-2">Case Studies</Link>
+					<Link to="/" className="px-2">Contact Us</Link>
+				</div>
+				<div>
+					<Link to="/login" className="px-5 py-2 text-white border border-primary flex justify-center items-center w-[121px] h-[48px] rounded-8 bg-primary">
 						Login
-					</Link> */}
+					</Link>
 				</div>
 			</nav>
 
 			<main className="min-h-screen px-8 pt-8 bg-white md:overflow-x-hidden">
-				<div className="grid items-center content-center my-8 md:grid-cols-2">
-					<div className="max-w-md col-span-1 mx-auto">
-						<h2 className="mb-4">Simplified and seamless borderless payments for Businesses.</h2>
-						<p className="text-lg text-blue-bodyLighter">
-							Mondu’s suite of business payment solutions enables businesses to send global payout to 80+ countries and enables them to
-							accept international payment
-						</p>
-
-						<div className="w-full gap-4 my-6 ">
-							<div className="col-span-2 my-2">
-								<TextInput label="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} inputID="emailID" />
-							</div>
-							<div className="flex items-end w-full col-span-1 my-2">
-								<button className="w-full px-3 py-2 text-white border rounded bg-primary" onClick={handleWaitingList}>
-									{loading ? <CgSpinner className="w-5 h-5 mr-2 animate-spin" /> : "Get early access"}
-								</button>
-							</div>
+				<div className="grid items-center content-center my-8 ">
+					<div className="max-w-[935px] mx-auto text-center">
+						<h1 className="">Powering Efficient B2B Remittance & Procurement Globally</h1>
+						<div className="max-w-[500px] mx-auto my-10">
+							<p className="text-lg text-black">
+								Cross-border transactions made easy. Send & receive payments, find & pay suppliers seamlessly.
+							</p>
 						</div>
+						<div className="flex justify-center">
+							<Link to="/signup" className="px-5 py-2 text-white border border-primary flex justify-center items-center w-[182px] h-[48px] rounded-8 bg-primary mr-2">
+								Create Account
+							</Link>
+							<Link to="/login" className="px-5 py-2 text-black border border-black flex justify-center items-center w-[182px] h-[48px] rounded-8 bg-white ml-2">
+								Talk to a specialist
+							</Link>
+						</div>
+						
 					</div>
-					<div className="col-span-1 ">
-						<div className="max-w-md mx-auto">
-							<img src={hero} className="" width="100%" height="100%" alt="Mondu Preview" layout="responsive" objectFit="contain" />
-						</div>
+					<div className="max-w-[1076px] mx-auto my-28">
+						<img
+							src={imgs.store}
+							className=""
+							width="100%"
+							height="100%"
+							alt="Settla Preview"
+							layout="responsive"
+							objectFit="contain"
+						/>
 					</div>
 				</div>
 
-				<div className="grid items-center content-center my-8 md:grid-cols-2">
-					<div className="hidden col-span-1 bg-no-repeat bg-contain md:block bg-blob">
-						<div className="max-w-xl mx-auto">
+				<div className="max-w-[990px] mx-auto">
+					<div className="mb-8 text-center max-w-[665px] mx-auto">
+						<h2 className="mb-2">Smart multi-currency payment for your business</h2>
+						<div className="max-w-[508px] mx-auto">
+							<p className="mt-4">Accept payments in various currencies, providing a seamless experience for your global audience.</p>
+						</div>
+					</div>
+					<div className="flex justify-between py-14">
+						{constants.converts?.map(item => (
+						<div key={item.id} className="h-[151px] w-[151px] rounded-2xl bg-[#E8F6F3] ">
+							<img src={item.icon} alt="usd" className="h-[77px] w-[77px] absolute z-10 ml-24 -mt-8" />
+							<div className="text-[16px] font-medium px-5 pt-24">
+								<small className="leading-none block">Converts</small>
+								<small className="leading-none">NGN to {item.currency}</small>
+							</div>
+						</div>
+						))}
+					</div>
+					<div className="flex justify-center">
+						<Link to="/signup" className="px-5 py-2 text-white border border-primary flex justify-center items-center w-[182px] h-[48px] rounded-8 bg-primary mr-2">
+							Create Account
+						</Link>
+						<Link to="/login" className="px-5 py-2 text-black border border-black flex justify-center items-center w-[182px] h-[48px] rounded-8 bg-white ml-2">
+							Talk to a specialist
+						</Link>
+					</div>
+				</div>
+
+				<section className="max-w-[1076px] mx-auto my-28">
+					<div className="mb-8 text-center max-w-[790px] mx-auto">
+						<h2 className="mb-12">Create an Account in 3 minutes</h2>
+						<div className="flex justify-center">
+							<div className="text-center px-4 py-3 cursor-pointer">
+								<div className="h-[41px] w-[41px] rounded-full bg-primary flex justify-center items-center mx-auto mb-2">
+									<img src={imgs.createAccount} alt="icon" />
+								</div>
+								<p className="text-primary font-semibold">Create Account</p>
+							</div>
+							<div className="text-center px-4 py-3 cursor-pointer">
+								<div className="h-[41px] w-[41px] rounded-full bg-primary/10 flex justify-center items-center mx-auto mb-2">
+									<img src={imgs.quick} alt="icon" />
+								</div>
+								<p className="text-black">Quick KYB</p>
+							</div>
+							<div className="text-center px-4 py-3 cursor-pointer">
+								<div className="h-[41px] w-[41px] rounded-full bg-primary/10 flex justify-center items-center mx-auto mb-2">
+									<img src={imgs.payIn} alt="icon" />
+								</div>
+								<p className="text-black">Pay In</p>
+							</div>
+							<div className="text-center px-4 py-3 cursor-pointer">
+								<div className="h-[41px] w-[41px] rounded-full bg-primary/10 flex justify-center items-center mx-auto mb-2">
+									<img src={imgs.payOut} alt="icon" />
+								</div>
+								<p className="text-black">Pay Out</p>
+							</div>
+							<div className="text-center px-4 py-3 cursor-pointer">
+								<div className="h-[41px] w-[41px] rounded-full bg-primary/10 flex justify-center items-center mx-auto mb-2">
+									<img src={imgs.conversion} alt="icon" />
+								</div>
+								<p className="text-black">Conversion</p>
+							</div>
+							<div className="text-center px-4 py-3 cursor-pointer">
+								<div className="h-[41px] w-[41px] rounded-full bg-primary/10 flex justify-center items-center mx-auto mb-2">
+									<img src={imgs.receipt} alt="icon" />
+								</div>
+								<p className="text-black">Receipt</p>
+							</div>
+						</div>
+					</div>
+
+					<div className="grid items-center content-center my-10 md:grid-cols-2">
+						<div className="hidden col-span-1 bg-no-repeat bg-contain md:block bg-blob">
+							<div className="max-w-xl mx-auto">
+								<img
+									src={transaction_history}
+									className=""
+									width="100%"
+									height="100%"
+									alt="Mondu Preview"
+									layout="responsive"
+									objectFit="contain"
+								/>
+							</div>
+						</div>
+						<div className="max-w-md col-span-1 mx-auto">
+							<h3 className="mb-4">Create an account for your business in 3 minutes</h3>
+							<p className="text-black">
+								Quickest way pay your international supplier, pay school fees, and keep your business moving.  Quickest way pay your international supplier, pay school fees, and keep your business moving
+							</p>
+							<div className="flex mt-8">
+								<Link to="/signup" className="px-5 py-2 text-white border border-primary flex justify-center items-center w-[182px] h-[48px] rounded-8 bg-primary mr-2">
+									Create Account
+								</Link>
+								<Link to="/login" className="px-5 py-2 text-black border border-black flex justify-center items-center w-[182px] h-[48px] rounded-8 bg-white ml-2">
+									Talk to a specialist
+								</Link>
+							</div>
+						</div>
+					</div>
+
+					<div className="my-28">
+						<div className="mb-8 text-center max-w-[665px] mx-auto">
+							<h2 className="mb-2">Convert and Payout effortlessly</h2>
+							<div className="max-w-[508px] mx-auto">
+								<p className="mt-4">Quickest way pay your international supplier, pay school fees, and keep your business moving forward.</p>
+							</div>
+						</div>
+						<div className="flex justify-center">
+							<Link to="/signup" className="px-5 py-2 text-white border border-primary flex justify-center items-center w-[182px] h-[48px] rounded-8 bg-primary mr-2">
+								Create Account
+							</Link>
+							<Link to="/login" className="px-5 py-2 text-black border border-black flex justify-center items-center w-[182px] h-[48px] rounded-8 bg-white ml-2">
+								Talk to a specialist
+							</Link>
+						</div>
+						<div className="mt-20">
 							<img
-								src={transaction_history}
-								className=""
-								width="100%"
-								height="100%"
-								alt="Mondu Preview"
-								layout="responsive"
-								objectFit="contain"
-							/>
+							src={imgs.store}
+							className=""
+							width="100%"
+							height="100%"
+							alt="Settla Preview"
+							layout="responsive"
+							objectFit="contain"
+						/>
 						</div>
 					</div>
-					<div className="max-w-md col-span-1 mx-auto">
-						<h2 className="mb-4">Fully Functional Business Payment Tools.</h2>
-						<p className="text-lg text-blue-bodyLighter">
-							Mondu helps businesses,banks and Financial Institutions make OTC cross border payouts to over 80 countries across with
-							world at unbeatable rates.
-						</p>
-					</div>
-				</div>
+				</section>
+
+				
 
 				<div className="grid items-center content-center my-8 md:grid-cols-2">
 					<div className="relative flex flex-col justify-between max-w-md col-span-1 mx-auto bg-white shadow-card rounded-3xl pt-14">
@@ -248,11 +339,11 @@ export default function Home() {
 				</div>
 			</main>
 			<nav className="w-full px-12 bg-white">
-				<div className="items-center justify-between border-t py-7 md:px-24 md:flex">
-					<p className="text-blue-bodyLighter">© 2021 Mondu.io All rights reserved.</p>
+				<div className="items-center justify-center border-t py-7 md:px-24 md:flex">
+					<p className="text-black text-[14px]">© 2024 Settla | All rights reserved.</p>
 				</div>
 			</nav>
 			<EmailSuccessModal status={modalStatus} closeModal={handleModalStatus} />
-		</>
+		</div>
 	);
 }

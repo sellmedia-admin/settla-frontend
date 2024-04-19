@@ -25,6 +25,13 @@ import receive from "../assets/svg/home/receive.svg";
 import europe from "../assets/svg/home/europe.svg";
 import retail from "../assets/svg/home/retail.svg";
 
+import toggle from "../assets/svg/home/toggle.svg";
+import add from "../assets/svg/home/add.svg";
+import minus from "../assets/svg/home/minus.svg";
+import usa2 from "../assets/svg/home/usa-card.svg";
+import naija from "../assets/svg/home/naija-card.svg";
+import canada2 from "../assets/svg/home/canada-card.svg";
+
 export const imgs = {
 	logo: logo,
 	store: store,
@@ -38,6 +45,12 @@ export const imgs = {
 	conversion: conversion,
 	receipt: receipt,
 	transactionHistory: transactionHistory,
+	toggle: toggle,
+	add: add,
+	minus: minus,
+	usa2: usa2,
+	naija:naija,
+	canada2: canada2,
 };
 
 export const constants = {

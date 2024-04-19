@@ -1,10 +1,4 @@
 import { Disclosure, Transition } from "@headlessui/react";
-import toggle from "../assets/svg/home/toggle.svg";
-import add from "../assets/svg/home/add.svg";
-import minus from "../assets/svg/home/minus.svg";
-import usa from "../assets/svg/home/usa-card.svg";
-import naija from "../assets/svg/home/naija-card.svg";
-import canada from "../assets/svg/home/canada-card.svg";
 
 import { million_things, questions } from "../helpers/constants";
 // import StepOne from "../components/transactions/sendmoney/StepOne";
@@ -226,7 +220,7 @@ export default function Home() {
 										<p className="text-lg">{thing.name}</p>
 									</div>
 									<div className="select-none w-7">
-										<img alt="cover" src={toggle} layout="fixed" />
+										<img alt="cover" src={imgs.toggle} layout="fixed" />
 									</div>
 								</div>
 							))}
@@ -239,14 +233,14 @@ export default function Home() {
 						<div>
 							<div className="flex mt-8 space-x-4">
 								<div>
-									<img alt="cover" src={usa} layout="fixed" />
+									<img alt="cover" src={imgs.usa2} layout="fixed" />
 								</div>
 								<div className="hidden md:block">
-									<img alt="cover" src={naija} layout="fixed" />
+									<img alt="cover" src={imgs.naija} layout="fixed" />
 								</div>
 							</div>
 							<div className="flex justify-center w-full mt-8">
-								<img alt="cover" src={canada} layout="fixed" />
+								<img alt="cover" src={imgs.canada2} layout="fixed" />
 							</div>
 						</div>
 					</div>
@@ -333,11 +327,11 @@ export default function Home() {
 
 											{open ? (
 												<div className="w-5">
-													<img alt="cover" src={minus} />
+													<img alt="cover" src={imgs.minus} />
 												</div>
 											) : (
 												<div className="w-5">
-													<img alt="cover" src={add} />
+													<img alt="cover" src={imgs.add} />
 												</div>
 											)}
 										</Disclosure.Button>

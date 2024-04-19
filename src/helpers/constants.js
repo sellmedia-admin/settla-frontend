@@ -20,17 +20,8 @@ import nigeria from "../assets/svg/nigeria.svg";
 import usa from "../assets/svg/usa.svg";
 import canada from "../assets/svg/canada.svg";
 import uk from "../assets/svg/uk.svg";
-import payment from "../assets/svg/home/payment.svg";
-import receive from "../assets/svg/home/receive.svg";
-import europe from "../assets/svg/home/europe.svg";
-import retail from "../assets/svg/home/retail.svg";
-
-import toggle from "../assets/svg/home/toggle.svg";
 import add from "../assets/svg/home/add.svg";
 import minus from "../assets/svg/home/minus.svg";
-import usa2 from "../assets/svg/home/usa-card.svg";
-import naija from "../assets/svg/home/naija-card.svg";
-import canada2 from "../assets/svg/home/canada-card.svg";
 
 export const imgs = {
 	logo: logo,
@@ -45,12 +36,8 @@ export const imgs = {
 	conversion: conversion,
 	receipt: receipt,
 	transactionHistory: transactionHistory,
-	toggle: toggle,
 	add: add,
 	minus: minus,
-	usa2: usa2,
-	naija:naija,
-	canada2: canada2,
 };
 
 export const constants = {
@@ -96,12 +83,12 @@ export const flags = {
 	},
 };
 
-export const million_things = [
-	{ name: "Payment", icon: payment },
-	{ name: "Receive money", icon: receive },
-	{ name: "Cross border payment", icon: europe },
-	{ name: "Retail payments", icon: retail },
-];
+// export const million_things = [
+// 	{ name: "Payment", icon: payment },
+// 	{ name: "Receive money", icon: receive },
+// 	{ name: "Cross border payment", icon: europe },
+// 	{ name: "Retail payments", icon: retail },
+// ];
 
 export const questions = [
 	{

@@ -55,6 +55,9 @@ module.exports = {
 			},
 			borderRadius: {
 				8: "8px",
+			},
+			maxWidth: {
+				default: "1078px",
 			}
 		},
 	},

@@ -36,7 +36,7 @@
 
 @layer components {
 	h1 {
-		@apply font-medium text-[40px] md:text-[60px] font-outfit leading-10 md:leading-[76px];
+		@apply font-medium text-[40px] md:text-[60px] font-outfit leading-10 md:leading-[66px];
 	}
 	h2 {
 		@apply font-semibold text-[34px] md:text-[44px] leading-9 md:leading-[55px] text-black font-outfit;
@@ -48,10 +48,38 @@
 		@apply font-semibold text-xl font-outfit;
 	}
 	p {
-		@apply text-black text-[14px] md:text-[18px] font-outfit;
+		@apply text-[#575757] text-[14px] md:text-[18px] font-outfit;
 	}
 }
 
 :root {
 	--primary: #16A887;
+}
+
+/* tabs styling */
+ul.nav li {
+	list-style: none;
+	text-align: center;
+	padding: 0.75rem 1rem;
+	cursor: pointer;
+	transition: all 0.7s;
+}
+ul.nav li div {
+	background: linear-gradient(22, 168, 135, 0.1);
+}
+ul.nav li div:hover  {
+	background: #16A887;
+}
+
+ul.nav li div.active {
+	background: #16A887;
+}
+ul.nav li p:hover {
+	font-weight: 600;
+	color: #16A887;
+}
+
+ul.nav li p.active {
+	font-weight: 600;
+	color: #16A887;
 }

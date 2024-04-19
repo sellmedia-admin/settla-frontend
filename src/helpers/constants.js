@@ -1,16 +1,20 @@
 import logo from "../assets/images/svg/settla-logo.svg";
 import store from "../assets/images/jpg/store-smile-settla.jpg";
+import happy from "../assets/images/jpg/happy-settla.jpg";
+import smile from "../assets/images/jpg/smile-settla.jpg";
 import usd from "../assets/images/png/usd.png";
 import gbp from "../assets/images/png/gbp.png";
 import eur from "../assets/images/png/eur.png";
 import cad from "../assets/images/png/cad.png";
 import yen from "../assets/images/png/yen.png";
+import flag from "../assets/images/png/flags.png";
 import createAccount from "../assets/images/svg/icons/user-add.svg";
 import quick from "../assets/images/svg/icons/shield.svg";
 import payIn from "../assets/images/svg/icons/pay-in.svg";
 import payOut from "../assets/images/svg/icons/pay-out.svg";
 import conversion from "../assets/images/svg/icons/refresh.svg";
 import receipt from "../assets/images/svg/icons/document.svg";
+import transactionHistory from "../assets/images/png/transaction_history.png";
 
 import nigeria from "../assets/svg/nigeria.svg";
 import usa from "../assets/svg/usa.svg";
@@ -24,12 +28,16 @@ import retail from "../assets/svg/home/retail.svg";
 export const imgs = {
 	logo: logo,
 	store: store,
+	happy: happy,
+	smile: smile,
+	flag: flag,
 	createAccount: createAccount,
 	quick: quick,
 	payIn: payIn,
 	payOut: payOut,
 	conversion: conversion,
 	receipt: receipt,
+	transactionHistory: transactionHistory,
 };
 
 export const constants = {
@@ -39,7 +47,12 @@ export const constants = {
 		{id: 1, currency: 'EUR', icon: eur},
 		{id: 1, currency: 'CAD', icon: cad},
 		{id: 1, currency: 'YEN', icon: yen},
-	]
+	],
+	settlaSteps: [
+		{ id: 1, title: 'Create account in 5min', subtitle: 'Quickest way pay your international supplier, pay school fees, and keep your business moving.' },
+		{ id: 2, title: 'Convert money', subtitle: 'Quickest way pay your international supplier, pay school fees, and keep your business moving.' },
+		{ id: 3, title: 'Pay supplier instantly', subtitle: 'Quickest way pay your international supplier, pay school fees, and keep your business moving.' },
+	],
 };
 
 export const flags = {
@@ -88,10 +101,10 @@ export const questions = [
 	},
 	{
 		question: "I am experiencing delays during transfers",
-		answer: "If you’re experiencing delays in transfers you can contact us via email info@mondu.io",
+		answer: "If you’re experiencing delays in transfers you can contact us via email info@settla.io",
 	},
 	{
-		question: "How secure is mondu",
+		question: "How secure is settla",
 		answer: (
 			<p>
 				1. We're a licensed money transmitter and we’re licensed in and are regulated by the authorities in the countries we operate in.{" "}

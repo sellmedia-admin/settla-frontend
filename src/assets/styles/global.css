@@ -36,7 +36,7 @@
 
 @layer components {
 	h1 {
-		@apply font-medium text-[40px] md:text-[60px] font-outfit leading-10 md:leading-[76px];
+		@apply font-medium text-[40px] md:text-[60px] font-outfit leading-10 md:leading-[66px];
 	}
 	h2 {
 		@apply font-semibold text-2xl text-grey-dark font-outfit;

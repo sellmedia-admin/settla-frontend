@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import {imgs} from "../../helpers/constants";
+import LinkButton from "../buttons/LinkButton";
+import LinkButton2 from "../buttons/LinkButton2";
 const CreateTab = () => {
   return (
     <div className="grid items-center content-center my-10 md:grid-cols-2">
@@ -19,16 +20,12 @@ const CreateTab = () => {
         </div>
         <div className="max-w-md col-span-1 mx-auto">
             <h3 className="mb-4">Create an account for your business in 3 minutes</h3>
-            <p className="text-black">
+            <p className="">
                 Quickest way pay your international supplier, pay school fees, and keep your business moving.  Quickest way pay your international supplier, pay school fees, and keep your business moving
             </p>
             <div className="flex mt-8">
-                <Link to="/signup" className="px-5 py-2 bg-primary text-white border border-primary hover:bg-white hover:text-black hover:border-black flex justify-center items-center md:text-[16px] text-[14px] md:w-[182px] w-[162px] h-[48px] rounded-8 mr-2">
-                    Create Account
-                </Link>
-                <Link to="/login" className="px-5 py-2 text-black border border-black flex justify-center items-center md:text-[16px] text-[14px] md:w-[182px] w-[162px] h-[48px] rounded-8 bg-white hover:bg-primary hover:text-white hover:border-primary ml-2">
-                    Talk to a specialist
-                </Link>
+                <LinkButton title="Create Account" link="/signup" />
+				<LinkButton2 title="Talk to a specialist" link="/contact" />
             </div>
         </div>
     </div>

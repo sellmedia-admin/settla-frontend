@@ -24,7 +24,7 @@ const TextInput = ({
 	return (
 		<div className="w-full">
 			<div className={`flex justify-between`}>
-				<p className="my-2 text-xs font-medium tracking-wider uppercase text-grey-lightGray">{label}</p>
+				<p className="my-2 text-xs font-medium tracking-wider capitalize text-grey-lightGray">{label}</p>
 				{withLink && <ButtonPlain label={withLink} style={{ color: "#B4BAC3" }} onClick={() => navigate("/forgot-password")} />}
 			</div>
 			<div className="relative">
@@ -35,7 +35,7 @@ const TextInput = ({
 				)}
 				<input
 					placeholder={placeholder ? placeholder : `Enter ${label}`}
-					className={`w-full h-10 border border-bg-blue-100 rounded text-sm 
+					className={`w-full h-12 border border-bg-blue-100 rounded-8 text-sm 
             ${inputType === "password" ? "tracking-widest" : "tracking-wide"}
             ${withIcon ? "pl-12" : ""}
             px-4 outline-none focus:ring-1 focus:ring-primary border-[#a9abae]`}
@@ -49,7 +49,7 @@ const TextInput = ({
 					{...rest}
 				/>
 				{inputType === "password" && (
-					<span className="absolute right-3 top-3" onClick={() => setShowXters(!showXters)}>
+					<span className="absolute right-3 top-4" onClick={() => setShowXters(!showXters)}>
 						{showXters ? <RiEyeFill size={16} color="#B4BAC3" /> : <RiEyeOffFill size={16} color="#B4BAC3" />}
 					</span>
 				)}

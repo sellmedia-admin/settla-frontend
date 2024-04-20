@@ -47,6 +47,7 @@ module.exports = {
 				card: "0px 4px 200px #F4F6F9",
 			},
 			backgroundImage: {
+				bg: 'url(/src/assets/images/svg/bg.svg)',
 				chevronDown: `url(/src/assets/svg/chevron-down.svg)`,
 				blob: `url(/src/assets/svg/home/blob.svg)`,
 			},
@@ -58,7 +59,16 @@ module.exports = {
 			},
 			maxWidth: {
 				default: "1078px",
-			}
+				760: "760px",
+				670: "670px",
+				544: "544px",
+				530: "530px",
+				508: "508px",
+				473: "473px",
+				462: "462px",
+				450: "450px",
+				249: "249px",
+			},
 		},
 	},
 	plugins: [],

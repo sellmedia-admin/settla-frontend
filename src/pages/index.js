@@ -1,17 +1,17 @@
+import LandingLayout from "../components/layouts/LandingLayout";
 import { Disclosure, Transition } from "@headlessui/react";
-
-import { questions } from "../helpers/constants";
 // import StepOne from "../components/transactions/sendmoney/StepOne";
 // import TextInput from "../components/inputs/TextInput";
 // import { useState } from "react";
 // import { CgSpinner } from "react-icons/cg";
 // import EmailSuccessModal from "../components/success/Email";
-import { Link } from 'react-router-dom';
-// import Tabs from "../components/tab-component/Tab";
 
 // constant 
-import { imgs, constants } from "../helpers/constants";
+import { imgs, constants, questions } from "../helpers/constants";
 import Tabs from "../components/tabs";
+import LinkButton from "../components/buttons/LinkButton";
+import LinkButton2 from "../components/buttons/LinkButton2";
+import AskQuestions from "../components/AskQuestions";
 
 export default function Home() {
 	// const [modalStatus, setModalStatus] = useState(false);
@@ -20,42 +20,7 @@ export default function Home() {
 	// };
 
 	return (
-		<div className="font-outfit">
-			<nav className="nav_links flex items-center justify-between max-w-default mx-auto px-4 py-6 bg-white md:px-0">
-				<div className="flex space-x-2">
-					<Link to="/"><img alt="logo" src={imgs.logo} className="logo" /></Link>
-				</div>
-				<div className="flex items-center text-[16px] gap-2 ">
-					<Link to="/features" className="px-2 hover:text-primary">Features</Link>
-					<Link to="/pricing" className="px-2 hover:text-primary">Pricing</Link>
-					<Link to="/about" className="px-2 hover:text-primary">Company</Link>
-					<Link to="/blog" className="px-2 hover:text-primary">Blog</Link>
-					<Link to="/case-studies" className="px-2 hover:text-primary">Case Studies</Link>
-					<Link to="/contact" className="px-2 hover:text-primary">Contact Us</Link>
-				</div>
-				<Link to="/login" className="px-5 py-2 bg-primary text-white border border-primary hover:bg-white hover:text-black hover:border-black flex justify-center items-center w-[121px] h-[48px] rounded-8">
-					Login
-				</Link>
-			</nav>
-			<nav className="responsive_nav_mobile">
-				<div className="container">
-					<input id="responsive-menu" type="checkbox" />
-					<label htmlFor="responsive-menu"><Link href="/"><img src={imgs.logo} alt="settla logo" className='logo' /></Link> <span id="menu-icon"></span></label>
-					<div id="overlay"></div>
-					<ul>
-						<li><Link to="/features" className="px-2 hover:text-primary">Features</Link></li>
-						<li><Link to="/pricing" className="px-2 hover:text-primary">Pricing</Link></li>
-						<li><Link to="/about" className="px-2 hover:text-primary">Company</Link></li>
-						<li><Link to="/blog" className="px-2 hover:text-primary">Blog</Link></li>
-						<li><Link to="/case-studies" className="px-2 hover:text-primary">Case Studies</Link></li>
-						<li><Link to="/contact" className="px-2 hover:text-primary">Contact Us</Link></li>
-						<li><Link to="/login" className="px-5 py-2 bg-primary text-white border border-primary hover:bg-white hover:text-black hover:border-black flex justify-center items-center w-[121px] h-[48px] mx-auto rounded-8">
-							Login
-						</Link></li>
-					</ul>
-				</div>
-			</nav>
-
+		<LandingLayout>
 			<main className="min-h-screen pt-8 bg-white">
 				<div className="grid items-center content-center my-8 px-4">
 					<div className="max-w-[935px] mx-auto text-center">
@@ -66,12 +31,8 @@ export default function Home() {
 							</p>
 						</div>
 						<div className="flex justify-center">
-							<Link to="/signup" className="px-5 py-2 bg-primary text-white border border-primary hover:bg-white hover:text-black hover:border-black flex justify-center items-center md:text-[16px] text-[14px] md:w-[182px] w-[162px] h-[48px] rounded-8 mr-2">
-								Create Account
-							</Link>
-							<Link to="/contact" className="px-5 py-2 text-black border border-black flex justify-center items-center md:text-[16px] text-[14px] md:w-[182px] w-[162px] h-[48px] rounded-8 bg-white hover:bg-primary hover:text-white hover:border-primary ml-2">
-								Talk to a specialist
-							</Link>
+							<LinkButton title="Create Account" link="/signup" />
+							<LinkButton2 title="Talk to a specialist" link="/contact" />
 						</div>
 						
 					</div>
@@ -107,12 +68,8 @@ export default function Home() {
 						))}
 					</div>
 					<div className="flex justify-center">
-						<Link to="/signup" className="px-5 py-2 bg-primary text-white border border-primary hover:bg-white hover:text-black hover:border-black flex justify-center items-center md:text-[16px] text-[14px] md:w-[182px] w-[162px] h-[48px] rounded-8 mr-2">
-							Create Account
-						</Link>
-						<Link to="/contact" className="px-5 py-2 text-black border border-black flex justify-center items-center md:text-[16px] text-[14px] md:w-[182px] w-[162px] h-[48px] rounded-8 bg-white hover:bg-primary hover:text-white hover:border-primary ml-2">
-							Talk to a specialist
-						</Link>
+						<LinkButton title="Create Account" link="/signup" />
+						<LinkButton2 title="Talk to a specialist" link="/contact" />
 					</div>
 				</div>
 
@@ -132,12 +89,8 @@ export default function Home() {
 							</div>
 						</div>
 						<div className="flex justify-center">
-							<Link to="/signup" className="px-5 py-2 bg-primary text-white border border-primary hover:bg-white hover:text-black hover:border-black flex justify-center items-center md:text-[16px] text-[14px] md:w-[182px] w-[162px] h-[48px] rounded-8 mr-2">
-								Create Account
-							</Link>
-							<Link to="/contact" className="px-5 py-2 text-black border border-black flex justify-center items-center md:text-[16px] text-[14px] md:w-[182px] w-[162px] h-[48px] rounded-8 bg-white hover:bg-primary hover:text-white hover:border-primary ml-2">
-								Talk to a specialist
-							</Link>
+							<LinkButton title="Create Account" link="/signup" />
+							<LinkButton2 title="Talk to a specialist" link="/contact" />
 						</div>
 						<div className="mt-20">
 							<img
@@ -174,41 +127,24 @@ export default function Home() {
 
 				<section className="bg-primary/10 py-16">
 					<h2 className="mb-12 text-center">Settla in 3 steps</h2>
-					<div className="grid content-center px-4 my-8 md:grid-cols-2">
+					<div className="grid content-center px-4 my-8 md:grid-cols-2 max-w-default mx-auto">
 						<div className="col-span-1 ">
-							<div className="max-w-md mx-auto pb-4">
+							<div className="max-w-544 pb-4">
 								<img src={imgs.happy} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
 							</div>
 						</div>
-						<div className="max-w-lg col-span-1">
+						<div className="max-w-473 ml-auto col-span-1">
 							{constants.settlaSteps?.map(item => (
 							<div key={item.id}>
 								<h3 className="mb-2">{item.title}</h3>
-								<p className="text-lg mb-6">{item.subtitle}</p>
+								<p className="mb-6">{item.subtitle}</p>
 							</div>
 							))}
 						</div>
 					</div>
 				</section>
 
-				<section className="px-4 py-16">
-					<div className="grid content-center items-center my-8 md:grid-cols-2">
-						<div className="col-span-1 max-w-md mx-auto">
-							<div className="py-4">
-								<h3 className="mb-2">Onboard with our specialist, ask them anything</h3>
-								<p className="text-lg mb-10">Need Help Getting Started? Our Team is Here to Guide You Through Settla's Easy Sign-up.</p>
-								<Link to="/contact" className="px-5 py-2 text-primary border border-primary flex justify-center items-center md:text-[16px] text-[14px] md:w-[182px] w-[162px] h-[48px] rounded-8 bg-white hover:bg-primary hover:text-white hover:border-primary">
-								Talk to a specialist
-							</Link>
-							</div>
-						</div>
-						<div className="col-span-1 ">
-							<div className="max-w-md mx-auto">
-								<img src={imgs.smile} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
-							</div>
-						</div>
-					</div>
-				</section>
+				<AskQuestions />
 
 				<div className="flex flex-col items-center w-full my-16">
 					<div className="mb-16 text-center">
@@ -262,12 +198,7 @@ export default function Home() {
 					))}
 				</div>
 			</main>
-			<nav className="w-full px-12 bg-white">
-				<div className="items-center justify-center border-t py-7 md:px-24 md:flex">
-					<p className="text-black text-[14px]">© 2024 Settla | All rights reserved.</p>
-				</div>
-			</nav>
 			{/* <EmailSuccessModal status={modalStatus} closeModal={handleModalStatus} /> */}
-		</div>
+		</LandingLayout>
 	);
 }

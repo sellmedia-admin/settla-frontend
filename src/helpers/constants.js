@@ -1,19 +1,39 @@
 import logo from "../assets/images/svg/settla-logo.svg";
+import logoWhite from "../assets/images/svg/settla-logo-white.svg";
 import store from "../assets/images/jpg/store-smile-settla.jpg";
 import happy from "../assets/images/jpg/happy-settla.jpg";
 import smile from "../assets/images/jpg/smile-settla.jpg";
+import case1 from "../assets/images/jpg/case1.jpg";
+import cargo from "../assets/images/jpg/cargo.jpg";
+import house from "../assets/images/jpg/house.jpg";
+import handshake from "../assets/images/jpg/handshake.jpg";
+import market from "../assets/images/jpg/market.jpg";
+import flight from "../assets/images/jpg/flight.jpg";
+import classroom from "../assets/images/jpg/classroom.jpg";
+import student from "../assets/images/jpg/student.jpg";
+import team from "../assets/images/jpg/team.jpg";
+import team1 from "../assets/images/jpg/team1.jpg";
+import team2 from "../assets/images/jpg/team2.jpg";
+import team3 from "../assets/images/jpg/team3.jpg";
+import team4 from "../assets/images/jpg/team4.jpg";
 import usd from "../assets/images/png/usd.png";
 import gbp from "../assets/images/png/gbp.png";
 import eur from "../assets/images/png/eur.png";
 import cad from "../assets/images/png/cad.png";
 import yen from "../assets/images/png/yen.png";
 import flag from "../assets/images/png/flags.png";
+import flags2 from "../assets/images/png/flags2.png";
 import createAccount from "../assets/images/svg/icons/user-add.svg";
 import quick from "../assets/images/svg/icons/shield.svg";
 import payIn from "../assets/images/svg/icons/pay-in.svg";
 import payOut from "../assets/images/svg/icons/pay-out.svg";
 import conversion from "../assets/images/svg/icons/refresh.svg";
 import receipt from "../assets/images/svg/icons/document.svg";
+import x from "../assets/images/svg/icons/x-logo.svg";
+import linkedin from "../assets/images/svg/icons/linkedin.svg";
+import facebook from "../assets/images/svg/icons/facebook.svg";
+import instagram from "../assets/images/svg/icons/instagram.svg";
+import messenger from "../assets/images/svg/icons/messenger.svg";
 import transactionHistory from "../assets/images/png/transaction_history.png";
 
 import nigeria from "../assets/svg/nigeria.svg";
@@ -25,10 +45,13 @@ import minus from "../assets/svg/home/minus.svg";
 
 export const imgs = {
 	logo: logo,
+	logoWhite: logoWhite,
 	store: store,
 	happy: happy,
 	smile: smile,
+	team: team,
 	flag: flag,
+	flags2: flags2,
 	createAccount: createAccount,
 	quick: quick,
 	payIn: payIn,
@@ -38,6 +61,11 @@ export const imgs = {
 	transactionHistory: transactionHistory,
 	add: add,
 	minus: minus,
+	x: x,
+	linkedin: linkedin,
+	facebook: facebook,
+	instagram: instagram,
+	messenger: messenger,
 };
 
 export const constants = {
@@ -53,6 +81,50 @@ export const constants = {
 		{ id: 2, title: 'Convert money', subtitle: 'Quickest way pay your international supplier, pay school fees, and keep your business moving.' },
 		{ id: 3, title: 'Pay supplier instantly', subtitle: 'Quickest way pay your international supplier, pay school fees, and keep your business moving.' },
 	],
+	caseStudies: [
+		{ id: 1, image: case1, date: 'March 26, 2024', title: 'How Settla Streamlines Procurement and Remittance in Africa', link: '/case-study/case1'},
+		{ id: 2, image: cargo, date: 'March 26, 2024', title: 'How Settla is bridging the gap between Naira and other currencies.', link: '/case-study/case1'},
+		{ id: 3, image: house, date: 'March 26, 2024', title: 'How Settla is bridging the gap between Naira and other currencies.', link: '/case-study/case1'},
+		{ id: 4, image: handshake, date: 'March 26, 2024', title: 'How Settla is bridging the gap between merchants and supplier', link: '/case-study/case1'},
+		{ id: 5, image: market, date: 'March 26, 2024', title: 'How Settla is bridging the gap between Naira and other currencies.', link: '/case-study/case1'},
+		{ id: 6, image: flight, date: 'March 26, 2024', title: 'How Settla is bridging the gap between Naira and other currencies.', link: '/case-study/case1'},
+		{ id: 7, image: classroom, date: 'March 26, 2024', title: 'How Settla is bridging the gap between Naira and other currencies.', link: '/case-study/case1'},
+		{ id: 8, image: student, date: 'March 26, 2024', title: 'How Settla is bridging the gap between Naira and other currencies.', link: '/case-study/case1'},
+	],
+	team: [
+		{ id: 1, image: team1, jd: 'Scrum Master', name: 'Simon Sais', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
+		{ id: 2, image: team2, jd: 'Chief Engineer', name: 'Opa Williams', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
+		{ id: 3, image: team3, jd: 'Compliance Specialist', name: 'Omowunmi Kpapa', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
+		{ id: 4, image: team4, jd: 'Product Designer', name: 'Lizzy Benson', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
+	],
+};
+
+export const caseStudy = {
+	aboutTitle: "Samanta Furnitures", 
+	aboutText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ", 
+	challenges: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.", 
+	challenge1Title: "Manual Collaboration:", 
+	challenge1Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ", 
+	challenge2Title: "Difficulty in Tracking Invoices:", 
+	challenge2Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ", 
+	challenge3Title: "Delayed Payments:", 
+	challenge3Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ", 
+	solution: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.",
+	solution1Title: "Centralized Document Management:",
+	solution1Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed ",
+	solution2Title: "Automated Notifications:",
+	solution2Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed ",
+	solution3Title: "Secure Communication:",
+	solution3Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed ",
+	solution4Title: "Invoice Financing:",
+	solution4Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed ",
+	result: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed ",
+	result1Title: "Enhanced Efficiency:",
+	result1Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed ",
+	result2Title: "Faster Payments:",
+	result2Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed ",
+	result3Title: "Stronger Relationship:",
+	result3Text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed ",
 };
 
 export const flags = {

@@ -12,6 +12,11 @@ import { AuthContextProvider } from "./context/AuthContext";
 import { Information, PersonalVerification } from "./pages/Verification";
 import Loader from "./components/Loader";
 import Logout from "./pages/Logout";
+import Features from "./pages/Features";
+import AboutCompany from "./pages/Company";
+import CaseStudy from "./pages/CaseStudy";
+import Contact from "./pages/Contact";
+import Case1 from "./pages/CaseStudy/case1";
 
 export const router = createBrowserRouter([
 	{
@@ -22,6 +27,26 @@ export const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Home />,
+			},
+			{
+				path: "/features",
+				element: <Features />,
+			},
+			{
+				path: "/about",
+				element: <AboutCompany />,
+			},
+			{
+				path: "/case-study",
+				element: <CaseStudy />,
+			},
+			{
+				path: "/case-study/case1",
+				element: <Case1 />
+			},
+			{
+				path: "/contact",
+				element: <Contact />,
 			},
 			{
 				path: "login",

@@ -8,7 +8,7 @@ const PrimaryBtn = ({ type, placeholder, children, disabled, onClick, width, sty
 			onClick={() => {
 				if (!disabled && onClick && !loading) onClick();
 			}}
-			className={`rounded h-12 flex items-center justify-center 
+			className={`rounded-8 h-12 flex items-center justify-center 
       ${disabled ? "bg-gray-400" : "bg-primary"}
       ${width ? width : "w-full"}
       text-white`}

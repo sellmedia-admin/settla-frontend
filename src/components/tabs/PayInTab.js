@@ -26,7 +26,7 @@ const PayInTab = () => {
             </p>
             <div className="flex mt-8">
                 <LinkButton title="Create Account" link="/signup" />
-				<LinkButton2 title="Talk to a specialist" link="/contact" />
+				<LinkButton2 title="Talk to a specialist" link="mailto:hello@usesettla.com" />
             </div>
         </div>
     </div>

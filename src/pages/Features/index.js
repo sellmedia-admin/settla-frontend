@@ -16,7 +16,7 @@ const Features = () => {
                         <p className="">Instantly convert Naira to over 25 global currencies, enabling seamless cross-border transactions for your business.</p>
                         <div className="flex mt-8">
                             <LinkButton title="Create Account" link="/signup" />
-                            <LinkButton2 title="Talk to a specialist" link="/contact" />
+                            <LinkButton2 title="Talk to a specialist" link="mailto:hello@usesettla.com" />
                         </div>
                     </div>
                     <div className="hidden col-span-1 bg-no-repeat bg-contain md:block bg-blob">

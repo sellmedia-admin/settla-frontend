@@ -32,7 +32,7 @@ export default function Home() {
 						</div>
 						<div className="flex justify-center">
 							<LinkButton title="Create Account" link="/signup" />
-							<LinkButton2 title="Talk to a specialist" link="/contact" />
+							<LinkButton2 title="Talk to a specialist" link="mailto:hello@usesettla.com" />
 						</div>
 						
 					</div>
@@ -69,7 +69,7 @@ export default function Home() {
 					</div>
 					<div className="flex justify-center">
 						<LinkButton title="Create Account" link="/signup" />
-						<LinkButton2 title="Talk to a specialist" link="/contact" />
+						<LinkButton2 title="Talk to a specialist" link="mailto:hello@usesettla.com" />
 					</div>
 				</div>
 
@@ -90,7 +90,7 @@ export default function Home() {
 						</div>
 						<div className="flex justify-center">
 							<LinkButton title="Create Account" link="/signup" />
-							<LinkButton2 title="Talk to a specialist" link="/contact" />
+							<LinkButton2 title="Talk to a specialist" link="mailto:hello@usesettla.com" />
 						</div>
 						<div className="mt-20">
 							<img

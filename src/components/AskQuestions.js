@@ -9,7 +9,7 @@ const AskQuestions = () => {
             <div className="col-span-1 max-w-473">
                 <div className="py-4">
                     <h3 className="mb-2">Onboard with our specialist, ask them anything</h3>
-                    <p className="text-lg mb-10">Need Help Getting Started? Our Team is Here to Guide You Through Settla's Easy Sign-up.</p>
+                    <p className="text-lg mb-10">Need help getting started? Our team is here to guide you through Settla's easy sign-up.</p>
                     <LinkButton3 title="Talk to a specialist" link="/contact" />
                 </div>
             </div>

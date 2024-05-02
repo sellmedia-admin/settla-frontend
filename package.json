@@ -2,6 +2,7 @@
   "name": "mondu",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ebenezy.github.io/settla-frontend",
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@tanstack/react-query": "^4.33.0",

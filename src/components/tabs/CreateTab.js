@@ -19,9 +19,9 @@ const CreateTab = () => {
             </div>
         </div>
         <div className="max-w-md col-span-1 mx-auto">
-            <h3 className="mb-4">Create an account for your business in 3 minutes</h3>
+            <h3 className="mb-4">Create your account to get started with your business transactions</h3>
             <p className="">
-                Quickest way pay your international supplier, pay school fees, and keep your business moving.  Quickest way pay your international supplier, pay school fees, and keep your business moving
+                Set up your business account swiftly in just three minutes with Settla's seamless registration process, empowering you to unlock a world of opportunities effortlessly.
             </p>
             <div className="flex mt-8">
                 <LinkButton title="Create Account" link="/signup" />

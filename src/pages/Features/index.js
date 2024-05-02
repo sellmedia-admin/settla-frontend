@@ -13,7 +13,7 @@ const Features = () => {
                 <div className="grid items-center content-center my-10 md:grid-cols-2 ">
                     <div className="max-w-530 col-span-1">
                         <h2 className="mb-4">Effortless Remittance, B2B Procurement Solutions</h2>
-                        <p className="">Instantly convert Naira to over 25 global currencies, enabling seamless cross-border transactions for your business.</p>
+                        <p className="">Effortlessly convert your Nigerian Naira into a diverse array of over 25 global currencies instantly, empowering your business to conduct smooth and efficient cross-border transactions with ease and confidence.</p>
                         <div className="flex mt-8">
                             <LinkButton title="Create Account" link="/signup" />
                             <LinkButton2 title="Talk to a specialist" link="mailto:hello@usesettla.com" />
@@ -49,8 +49,8 @@ const Features = () => {
                         </div>
                     </div>
                     <div className="max-w-473 col-span-1 mx-auto mb-8">
-                        <h3 className="mb-4">Pay In with from your local IBAN account</h3>
-                        <p className="">Seamlessly integrate your transactions with Settla's platform. Experience swift and secure B2B currency conversions</p>
+                        <h3 className="mb-4">Initiate payments using your domestic IBAN account.</h3>
+                        <p className="">Effortlessly sync your transactions with the Settla platform for swift and secure B2B currency conversions.</p>
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@ const Features = () => {
                     <div className="max-w-473 col-span-1">
                         <h3 className="mb-4">Convert NGN to foreign currencies</h3>
                         <div className='mb-4'><img src={imgs.flags2} alt='flags' /></div>
-                        <p className="">Settla is your trusted partner for B2B businesses within Africa and globally, offering seamless currency conversion solutions. Convert your native currency, Naira (NGN), into over 25 different foreign currencies and cryptocurrencies, facilitating smooth cross-border transactions. Our integrated payment solutions ensure flexibility and convenience, empowering your business to thrive in the global market.</p>
+                        <p className="">Settla serves as your reliable ally for B2B enterprises across Africa and worldwide, providing effortless currency conversion solutions. Convert your local currency, Naira (NGN), into over 25 foreign currencies and cryptocurrencies, enabling seamless cross-border transactions. Our comprehensive payment solutions guarantee adaptability and ease, empowering your business to excel in the global marketplace.</p>
                     </div>
                     <div className="hidden col-span-1 bg-no-repeat bg-contain md:block bg-blob">
                         <div className="max-w-462 ml-auto">
@@ -90,8 +90,8 @@ const Features = () => {
                         </div>
                     </div>
                     <div className="max-w-473 col-span-1 mx-auto mb-8">
-                        <h3 className="mb-4">Pay Out with from your local IBAN account</h3>
-                        <p className="">Effortlessly streamline global payouts with Settla's advanced system. Seamlessly convert funds and execute cross-border transactions with ease by leveraging our robust platform. Simplify your experience – register, complete KYB, and unlock the convenience of seamless international transactions</p>
+                        <h3 className="mb-4">Make payouts directly from your local IBAN account</h3>
+                        <p className="">Effortlessly optimize global payouts using Settla's cutting-edge system. Seamlessly convert funds and conduct cross-border transactions effortlessly through our resilient platform. Simplify your journey – register, fulfill KYB requirements, and access the convenience of seamless international transactions.</p>
                     </div>
                 </div>
             </div>

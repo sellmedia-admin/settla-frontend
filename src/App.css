@@ -89,9 +89,11 @@ ul.nav li div {
 }
 ul.nav li:hover > div  {
 	background: #16A887;
+	color: #FFFFFF;
 }
 ul.nav li.active > div {
 	background: #16A887;
+	color: #FFFFFF;
 }
 ul.nav li div svg:hover {
 	fill: #FFFFFF !important;

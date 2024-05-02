@@ -108,10 +108,9 @@ export default function Home() {
 				
 				<div className="grid items-center content-center my-16 px-4 md:grid-cols-2">
 					<div className="max-w-md col-span-1 mx-auto">
-						<h2 className="mb-4">Freedom Without Borders </h2>
+						<h2 className="mb-4">Effortlessly Process Payments Across Borders</h2>
 						<p className="text-lg text-blue-bodyLighter">
-							We design our products and services to be fully manageable online and on mobile, providing access to global financial
-							payment markets wherever our clients maybe.
+							Easily accept payments from diverse global customers hassle-free with Settla's streamlined cross-border payment processing solutions, simplifying international transactions for your business.
 						</p>
 					</div>
 

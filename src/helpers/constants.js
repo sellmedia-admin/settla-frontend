@@ -77,9 +77,9 @@ export const constants = {
 		{id: 1, currency: 'YEN', icon: yen},
 	],
 	settlaSteps: [
-		{ id: 1, title: 'Create account in 5min', subtitle: 'Quickest way pay your international supplier, pay school fees, and keep your business moving.' },
-		{ id: 2, title: 'Convert money', subtitle: 'Quickest way pay your international supplier, pay school fees, and keep your business moving.' },
-		{ id: 3, title: 'Pay supplier instantly', subtitle: 'Quickest way pay your international supplier, pay school fees, and keep your business moving.' },
+		{ id: 1, title: 'Account Creation Made Simple', subtitle: 'Easily establish your account in just a few moments, streamlining your entry into our platform.' },
+		{ id: 2, title: 'Seamless Currency Conversion', subtitle: 'Effortlessly convert currencies with our intuitive and efficient solution, ensuring smooth transactions worldwide.' },
+		{ id: 3, title: 'Instant Payment Processing', subtitle: 'Experience instant payment processing for swift and convenient transactions, anytime, anywhere.' },
 	],
 	caseStudies: [
 		{ id: 1, image: case1, date: 'March 26, 2024', title: 'How Settla Streamlines Procurement and Remittance in Africa', link: '/case-study/case1'},

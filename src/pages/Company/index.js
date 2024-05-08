@@ -12,7 +12,7 @@ const AboutCompany = () => {
                 <h2 className="">About Settla</h2>
                 <div className="max-w-508 mx-auto mt-5 mb-8">
                     <p className="mb-5">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                        Discover the story behind Settla, the pioneering force reshaping financial transactions worldwide.
                     </p>
                 </div>
             </div>
@@ -30,12 +30,12 @@ const AboutCompany = () => {
             </div>
             <div className='mb-8'>
               <h3 className='text-primary mb-4'>Our Story</h3>
-              <p className='mb-6'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-              <p className='mb-6'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto bSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto b</p>
+              <p className='mb-6'>At Settla, we're dedicated to transforming the way businesses and individuals manage their financial transactions across borders. With our innovative payment platform, spanning 25 countries in Africa, USA, UK, and Canada, we provide a seamless experience for sending and receiving money.</p>
+              <p className='mb-6'> Leveraging the latest technology, we prioritize security, offering low-interest rates and ensuring compliance with policies and regulations. Our user-friendly onboarding process makes getting started easy, while our instant transactions ensure swift access to funds. Experience the convenience, security, and affordability of Settla, where your financial needs are our priority.</p>
             </div>
             <div className='mb-8'>
               <h3 className='text-primary mb-4'>Meet The Team</h3>
-              <p>If you need support, you’ve come to the right place. Here you can browse our frequently asked questions or get in touch with a team member. It’s simple.</p>
+              <p>If you find yourself in need of assistance, know that we're here to lend a hand. Whether perusing our FAQs or reaching out to a team member, accessing support is made easy with us.</p>
             </div>
             <div className="grid items-center content-center lg:grid-cols-4 md:grid-cols-3 grid-cols-1 mb-20">
                 {constants.team?.map(item => (
@@ -64,8 +64,8 @@ const AboutCompany = () => {
 
             <div className='mb-8'>
               <h3 className='text-primary mb-4'>How we are making a difference</h3>
-              <p className='mb-6'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-              <p className='mb-6'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto bSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto b</p>
+              <p className='mb-6'>At Settla, we're more than just a financial payment platform – we're agents of change. By bridging borders and connecting businesses and individuals across 25 countries in Africa, USA, UK, and Canada, we're fostering economic empowerment and growth. Our commitment to leveraging new technology ensures secure, low-interest transactions, making financial management accessible to all. Through our user-friendly platform, we're simplifying the complex process of international transactions, empowering our users to navigate the global economy with ease.</p>
+              <p className='mb-6'>With a dedication to absolute compliance with policies and regulations, we're building trust and confidence in every transaction. Settla isn't just about sending and receiving money – it's about breaking barriers, forging connections, and making a lasting impact on the lives of our users and their communities. Join us on our journey to redefine financial empowerment and make a difference in the world, one transaction at a time.</p>
             </div>
             <div className="md:my-20 my-10">
                 <img

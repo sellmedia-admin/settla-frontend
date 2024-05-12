@@ -99,13 +99,10 @@ const Register = () => {
   }, [error, setError]);
 
   return (
-    <OnboardingLayout title={`Sign up`}>
+    <OnboardingLayout title={`Sign Up`}>
       <div className="w-full">
-        <div className="max-w-lg px-8 py-16 mx-auto">
-          <h4 className="text-[34px] text-grey-dark">Sign up</h4>
-          <p className="mb-4 text-blue-offBlue">
-            Please enter your credentials to proceed
-          </p>
+        <div className="max-w-lg md:px-8 px-4 md:py-10 py-4 mx-auto">
+          
           {!!error && (
             <div
               onClick={() => setError("")}
@@ -163,6 +160,10 @@ const Register = () => {
             >
               {({ values, handleChange, handleSubmit }) => (
                 <form className="w-full space-y-4" onSubmit={handleSubmit}>
+                  <div className="text-center">
+                    <h4 className="text-[24px] text-grey-dark">Create Account</h4>
+                    <p className="text-[18px] mb-4 text-blue-offBlue">Complete registration with your valid credentials</p>
+                  </div>
                   <div className="grid gap-4 min-[800px]:grid-cols-2">
                     <div>
                       <TextInput
@@ -280,33 +281,35 @@ const Register = () => {
                       component="div"
                     />
                   </div>
-                  <div>
-                    <TextInput
-                      label="Password"
-                      type="password"
-                      name="password"
-                      value={values.password}
-                      onChange={handleChange}
-                    />
-                    <ErrorMessage
-                      name="password"
-                      className="text-red-500 text-[0.8rem]"
-                      component="div"
-                    />
-                  </div>
-                  <div>
-                    <TextInput
-                      label="Confirm Password"
-                      type="password"
-                      name="confirm_password"
-                      value={values.confirm_password}
-                      onChange={handleChange}
-                    />
-                    <ErrorMessage
-                      name="confirm_password"
-                      className="text-red-500 text-[0.8rem]"
-                      component="div"
-                    />
+                  <div className="grid gap-4 min-[800px]:grid-cols-2">
+                    <div>
+                      <TextInput
+                        label="Password"
+                        type="password"
+                        name="password"
+                        value={values.password}
+                        onChange={handleChange}
+                      />
+                      <ErrorMessage
+                        name="password"
+                        className="text-red-500 text-[0.8rem]"
+                        component="div"
+                      />
+                    </div>
+                    <div>
+                      <TextInput
+                        label="Confirm Password"
+                        type="password"
+                        name="confirm_password"
+                        value={values.confirm_password}
+                        onChange={handleChange}
+                      />
+                      <ErrorMessage
+                        name="confirm_password"
+                        className="text-red-500 text-[0.8rem]"
+                        component="div"
+                      />
+                    </div>
                   </div>
                   <div>
                     <div className="flex items-center space-x-4">
@@ -330,7 +333,7 @@ const Register = () => {
                     type="submit"
                     loading={registerLoading}
                     disabled={registerLoading}
-                    placeholder="Sign up"
+                    placeholder="Sign Up"
                   />
                   <p className="mt-4 text-center text-grey-lightGray">
                     Already have an account?{" "}
@@ -358,7 +361,11 @@ const Register = () => {
               }}
             >
               {({ values, setFieldValue, handleSubmit }) => (
-                <form className="w-full space-y-6" onSubmit={handleSubmit}>
+                <form className="w-full h-[55vh] space-y-6" onSubmit={handleSubmit}>
+                  <div className="text-center">
+                    <h4 className="text-[24px] text-grey-dark">Verify Email</h4>
+                    <p className="text-[18px] mb-4 text-blue-offBlue pb-5">An OTP has been sent to your registered email address</p>
+                  </div>
                   <div>
                     <OTPInput
                       value={values.otp}
@@ -382,7 +389,7 @@ const Register = () => {
                   <Button
                     loading={verifyLoading || updateLoading}
                     disabled={verifyLoading || updateLoading}
-                    placeholder="Sign up"
+                    placeholder="Verify OTP"
                     type="submit"
                   />
                   <p className="mt-4 text-center text-grey-lightGray">
@@ -391,7 +398,7 @@ const Register = () => {
                       className=""
                       onClick={() => resendMutate({ email: user?.email })}
                     >
-                      <span className="cursor-pointer text-blue-ink">
+                      <span className="cursor-pointer text-black">
                         Resend OTP
                       </span>
                     </button>

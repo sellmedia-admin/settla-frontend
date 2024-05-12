@@ -3,7 +3,7 @@ import React from "react";
 const SelectInput = ({ label, placeholder, data, onChange, name, value, className, ...rest }) => {
 	return (
 		<div>
-			<p className="my-2 text-xs font-medium tracking-wider uppercase text-grey-lightGray">{label}</p>
+			<p className="my-2 text-xs font-medium tracking-wider text-black">{label}</p>
 			<select
 				placeholder={placeholder ? placeholder : `Enter ${label}`}
 				className={`appearance-none w-full h-12 border rounded-8 text-sm px-4 outline-none focus:ring-1 focus:ring-primary bg-chevronDown bg-right-95 bg-no-repeat border-[#a9abae] ${className}`}

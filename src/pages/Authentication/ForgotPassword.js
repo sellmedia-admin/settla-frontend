@@ -40,7 +40,7 @@ const ForgotPassword = () => {
 
 	return (
 		<OnboardingLayout title="Forgot Password">
-			<div className="flex flex-col justify-center w-full h-full max-w-md p-8 mx-auto">
+			<div className="flex flex-col justify-center w-full h-[70vh] max-w-md p-8 mx-auto">
 				<div>
 					<h4 className="text-[34px] text-grey-dark">Forgot Password</h4>
 					<p className="text-blue-offBlue">Please enter your email to proceed.</p>

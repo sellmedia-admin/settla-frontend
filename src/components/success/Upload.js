@@ -18,22 +18,22 @@ export default function UploadSuccessModal({ status, closeModal }) {
 
 					<div className="inline-block w-full max-w-lg p-4 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
 						<img alt="" src={success} className="w-full h-auto" />
-						<h4 className="my-3 text-xl font-medium text-center text-grey-title">Document succesfully uploaded!!</h4>
+						<h4 className="my-3 text-xl font-medium text-center text-grey-title">Document successfully uploaded!</h4>
 						<p className="mb-3 text-grey-title">
 							Hey <span className="font-semibold">{user?.profile?.firstName},</span>
 						</p>
 						{/* <p className="leading-7 text-grey-title">
-							Welcome to Mondu, your account has been succesfully created and you are ready to get
-							started. Mondu is your simple solution to a secure and seamless cross-border payment service
+							Welcome to Settla, your account has been successfully created and you are ready to get
+							started. Settla is your simple solution to a secure and seamless cross-border payment service
 							for inbound and outbound money transfers between Nigeria, the U.S, and Canada.
 						</p> */}
 						<p className="mb-3 leading-7 text-grey-title">
-							Now you are equiped with all you need, but if you need help getting started, contact sales@mondu.io and you'll be up and
+							Now you are equipped with all you need, but if you need help getting started, contact sales@getsettla.com and you'll be up and
 							running in no time.
 						</p>
 
-						<p>The Mondu team.</p>
-						<div className="my-4">
+						<p>The Settla Team.</p>
+						<div className="my-6">
 							<MiniBtn placeholder="Go to dashboard" onClick={closeModal} width="w-full" />
 						</div>
 					</div>

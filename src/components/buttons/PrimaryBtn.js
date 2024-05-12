@@ -8,10 +8,10 @@ const PrimaryBtn = ({ type, placeholder, children, disabled, onClick, width, sty
 			onClick={() => {
 				if (!disabled && onClick && !loading) onClick();
 			}}
-			className={`rounded-8 h-12 flex items-center justify-center 
-      ${disabled ? "bg-gray-400" : "bg-primary"}
+			className={`rounded-8 h-[50px] flex items-center justify-center 
+      ${disabled ? "bg-gray-400" : "bg-primaryBtn"}
       ${width ? width : "w-full"}
-      text-white`}
+      text-black`}
 			style={style}
 		>
 			{loading && <CgSpinner className="w-5 h-5 mr-2 animate-spin" />}

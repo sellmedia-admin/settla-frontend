@@ -56,7 +56,7 @@ const Login = () => {
 	};
 
 	return (
-		<OnboardingLayout title="SIgn In">
+		<OnboardingLayout title="Sign In">
 			<div className="flex flex-col justify-center w-full h-full max-w-md p-8 mx-auto">
 				<div>
 					<h4 className="text-[34px] text-grey-dark">Sign in</h4>

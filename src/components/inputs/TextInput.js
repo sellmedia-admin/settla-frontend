@@ -24,7 +24,7 @@ const TextInput = ({
 	return (
 		<div className="w-full">
 			<div className={`flex justify-between`}>
-				<p className="my-2 text-xs font-medium tracking-wider capitalize text-grey-lightGray">{label}</p>
+				<p className="my-2 text-xs font-medium tracking-wider capitalize text-black">{label}</p>
 				{withLink && <ButtonPlain label={withLink} style={{ color: "#B4BAC3" }} onClick={() => navigate("/forgot-password")} />}
 			</div>
 			<div className="relative">
@@ -34,7 +34,7 @@ const TextInput = ({
 					</div>
 				)}
 				<input
-					placeholder={placeholder ? placeholder : `Enter ${label}`}
+					placeholder={placeholder ? placeholder : `${label}`}
 					className={`w-full h-12 border border-bg-blue-100 rounded-8 text-sm 
             ${inputType === "password" ? "tracking-widest" : "tracking-wide"}
             ${withIcon ? "pl-12" : ""}

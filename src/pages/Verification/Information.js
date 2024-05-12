@@ -98,6 +98,7 @@ const Information = () => {
 							<div className="w-full space-y-4">
 								<div className="space-y-2 text-center">
 									<h4 className="text-[20px]">Personal Information</h4>
+									<p className="text-[18px] mb-4 text-blue-offBlue pb-5">Complete registration process with valid information</p>
 								</div>
 
 								<div>
@@ -109,20 +110,22 @@ const Information = () => {
 									<TextInput label="Address" type="text" name="addressLine" value={values.addressLine} onChange={handleChange} />
 									<ErrorMessage name="addressLine" className="text-red-500 text-[0.8rem]" component="div" />
 								</div>
-
-								<div>
-									<TextInput label="City" type="text" name="addressCity" value={values.addressCity} onChange={handleChange} />
-									<ErrorMessage name="addressCity" className="text-red-500 text-[0.8rem]" component="div" />
-								</div>
-
+								
 								<div>
 									<TextInput label="State" type="text" name="addressState" value={values.addressState} onChange={handleChange} />
 									<ErrorMessage name="addressState" className="text-red-500 text-[0.8rem]" component="div" />
 								</div>
 
-								<div>
-									<TextInput label="Zip Code" type="text" name="addressZip" value={values.addressZip} onChange={handleChange} />
-									<ErrorMessage name="addressZip" className="text-red-500 text-[0.8rem]" component="div" />
+								<div className="grid gap-4 min-[800px]:grid-cols-2">
+									<div>
+										<TextInput label="City" type="text" name="addressCity" value={values.addressCity} onChange={handleChange} />
+										<ErrorMessage name="addressCity" className="text-red-500 text-[0.8rem]" component="div" />
+									</div>
+
+									<div>
+										<TextInput label="Zip Code" type="text" name="addressZip" value={values.addressZip} onChange={handleChange} />
+										<ErrorMessage name="addressZip" className="text-red-500 text-[0.8rem]" component="div" />
+									</div>
 								</div>
 
 								<div className="flex justify-center w-full">

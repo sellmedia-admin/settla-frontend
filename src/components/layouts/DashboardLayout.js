@@ -26,8 +26,8 @@ const DashboardLayout = ({ title, children, sidebar }) => {
 			{showSidebar && (sidebar === "inner" ? <InnerSidebar /> : <Sidebar />)}
 			<Navbar />
 			<main className="lg:ml-[200px] lg:px-4 px-4 bg-white">
-				{title}
-				<div className="py-8" onClick={hidePanel}>
+				<h1 className="text-[18px] md:text-[24px]">{title}</h1>
+				<div className="py-3" onClick={hidePanel}>
 					{children}
 				</div>
 			</main>

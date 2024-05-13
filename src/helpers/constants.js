@@ -41,6 +41,13 @@ import usa from "../assets/svg/usa.svg";
 import canada from "../assets/svg/canada.svg";
 import uk from "../assets/svg/uk.svg";
 import add from "../assets/svg/home/add.svg";
+import add2 from "../assets/images/svg/icons/add2.svg";
+import add3 from "../assets/images/svg/icons/add3.svg";
+import avatar from "../assets/images/svg/icons/avatar.svg";
+import reload from "../assets/images/svg/icons/reload.svg";
+import payout from "../assets/images/svg/icons/payout.svg";
+import receive from "../assets/images/svg/icons/receive.svg";
+import fund from "../assets/images/svg/icons/fund.svg";
 import minus from "../assets/svg/home/minus.svg";
 
 export const imgs = {
@@ -60,6 +67,13 @@ export const imgs = {
 	receipt: receipt,
 	transactionHistory: transactionHistory,
 	add: add,
+	add2: add2,
+	add3: add3,
+	avatar: avatar,
+	reload: reload,
+	payout: payout,
+	receive: receive,
+	fund: fund,
 	minus: minus,
 	x: x,
 	linkedin: linkedin,
@@ -129,22 +143,22 @@ export const caseStudy = {
 
 export const flags = {
 	NGN: {
-		icon: <img alt="flag" className="w-[32px] h-[32px]" src={nigeria} />,
+		icon: <img alt="flag" className={`w-[32px] h-[32px]`} src={nigeria} />,
 		label: "Nigerian Naira",
 		symbol: "₦",
 	},
 	USD: {
-		icon: <img alt="flag" className="w-[32px] h-[32px]" src={usa} />,
+		icon: <img alt="flag" className={`w-[32px] h-[32px]`} src={usa} />,
 		label: "United States Dollar",
 		symbol: "$",
 	},
 	CAD: {
-		icon: <img alt="flag" className="w-[32px] h-[32px]" src={canada} />,
+		icon: <img alt="flag" className={`w-[32px] h-[32px]`} src={canada} />,
 		label: "Canadian Dollar",
 		symbol: "$",
 	},
 	GBP: {
-		icon: <img alt="flag" className="w-[32px] h-[32px]" src={uk} />,
+		icon: <img alt="flag" className={`w-[32px] h-[32px]`} src={uk} />,
 		label: "British Pounds",
 		symbol: "£",
 	},

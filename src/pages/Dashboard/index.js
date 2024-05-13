@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { RiSendPlaneFill } from "react-icons/ri";
-import { TbWallet } from "react-icons/tb";
 import Beneficiary from "../../components/Beneficiary";
 import CurrencyCard from "../../components/cards/CurrencyCard";
 import DashboardLayout from "../../components/layouts/DashboardLayout";
@@ -12,19 +10,19 @@ import TransactionDetails from "../../components/transactions/TransactionDetails
 import Beneficiaries from "./Beneficiaries";
 import Teams from "./Teams";
 
-import add from "../../assets/svg/add.svg";
+import { imgs } from "../../helpers/constants";
 import Account from "./Account";
 import Profile from "./Profile";
 import Transactions, { transactionColumns } from "./Transactions";
 import { useAuthContext } from "../../context/AuthContext";
 import { useQueries, useQuery } from "@tanstack/react-query";
 import { getBeneficiaries, getTransactions, getWalletBalance } from "../../server";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import CustomDataTable from "../../components/CustomDataTable";
 
 const Dashboard = ({ query }) => {
-	const { user: loggedInUser, team } = useAuthContext();
-	const navigate = useNavigate();
+	const { user: team } = useAuthContext();
+	// const navigate = useNavigate();
 
 	const [sendMoneyStatus, setSendStatus] = useState(false);
 	const [fundAccountStatus, setFundStatus] = useState(false);
@@ -62,55 +60,86 @@ const Dashboard = ({ query }) => {
 
 	return (
 		<>
-			<DashboardLayout title="Dashboard">
-				<h3 className="text-gray-800">Hi {loggedInUser?.profile?.firstName}!</h3>
-				<div className="grid gap-4 my-8 sm:grid-cols-2 lg:grid-cols-3">
-					{arrangedWallet?.map((currency, index) => (
-						<CurrencyCard currency={currency?.currency} amount={currency?.wallet_value} key={index} />
-					))}
-				</div>
-				<div className="mt-12 xl:grid xl:grid-cols-3">
-					<div className="my-8">
-						<div className="mb-8">
-							<h1 className="text-xs uppercase">actions</h1>
+			<DashboardLayout title="Account Overview">
+				<div className="grid gap-4 my-3 sm:grid-cols-2 lg:grid-cols-2">
+					<div className="col-span-1 mb-4 lg:border-r md:border-r border-[#EBEBEB] lg:pr-4">
+						<small className="text-[12px]">Total balance</small>
+						<h3 className="text-gray-800 text-[20px] md:text-[25px]">30,567,100 NGN</h3>
+						{/* <h3 className="text-gray-800">Hi {loggedInUser?.profile?.firstName}!</h3> */}
+						<div className="grid gap-4 my-5 sm:grid-cols-2 lg:grid-cols-2">
+							{arrangedWallet?.map((currency, index) => (
+								<CurrencyCard currency={currency?.currency} amount={currency?.wallet_value} key={index} />
+							))}
 						</div>
-						<div className="flex flex-wrap gap-4 flex-column item-center">
-							<button
-								onClick={toggleFundAccount}
-								className="flex items-center gap-1 px-2 py-4 border rounded-lg cursor-pointer bg-primary border-primary"
-							>
-								<img alt="cover" src={add} size={24} />
-								<span className="text-white text-[0.9rem]">Fund Account</span>
-							</button>
-							<button
-								onClick={toggleSendMoney}
-								className="flex items-center gap-1 px-2 py-4 bg-white border rounded-lg cursor-pointer border-primary"
-							>
-								<RiSendPlaneFill className="text-primary" size={20} />
-								<span className="text-[0.9rem]">Send Money</span>
-							</button>
-							<button
-								onClick={toggleFundWallet}
-								className="flex items-center gap-1 px-2 py-4 bg-white border rounded-lg cursor-pointer border-primary"
-							>
-								<TbWallet className="text-primary" size={20} />
-								<span className="text-[0.9rem]">Fund Wallet</span>
-							</button>
+						<div className="">
+							<h1 className="text-lg">Quick Actions</h1>
+							<div className="flex flex-wrap gap-4 item-center">
+								<button
+									onClick={toggleSendMoney}
+									className="flex items-center h-[44px] gap-1 pl-2 pr-4 py-4 bg-[#BEFFC4] border rounded-lg cursor-pointer border-[#BEFFC4]"
+								>
+									<img alt="cover" src={imgs.payout} size={24} />
+									<span className="text-[0.75rem] ml-2">Make Payout</span>
+								</button>
+								<button
+									onClick={toggleFundAccount}
+									className="flex items-center h-[44px] gap-1 pl-2 pr-4 py-4 border rounded-lg cursor-pointer bg-[#DAEFFF] border-[#DAEFFF]"
+								>
+									<img alt="cover" src={imgs.add3} size={24} />
+									<span className="text-[#0091FF] text-[0.75rem] ml-2">Fund Account</span>
+								</button>
+								
+								<button
+									onClick={toggleFundWallet}
+									className="flex items-center h-[44px] gap-1 pl-2 pr-4 py-4 bg-[#DAEFFF] border rounded-lg cursor-pointer border-[#DAEFFF]"
+								>
+									<img alt="cover" src={imgs.add3} size={24} />
+									<span className="text-[0.75rem] ml-2 text-[#0091FF]">Fund Wallet</span>
+								</button>
+							</div>
+						</div>
+						<h3 className="text-lg mt-8">Recent Transactions</h3>
+						<p className="text-[12px] text-[#979797] mt-0 mb-3">Today, May 8</p>
+						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-3 mb-3">
+							<div className="flex">
+								<img src={imgs.payout} alt="icon" className="w-[21px]" />
+								<div className="ml-2">
+									<span>Payout to </span><span className="font-semibold">Jonathan Doe </span><span className="text-[#0091FF]">Success</span>
+								</div>
+							</div>
+							<span>-2,000 USD</span>
+						</div>
+						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-3 mb-3">
+							<div className="flex">
+								<img src={imgs.receive} alt="icon" className="w-[21px]" />
+								<div className="ml-2">
+									<span>Received from </span><span className="font-semibold">John Doe </span><span className="text-[#0091FF]">Receive</span>
+								</div>
+							</div>
+							<span>+1,000 USD</span>
+						</div>
+						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-3 mb-3">
+							<div className="flex">
+								<img src={imgs.fund} alt="icon" className="w-[21px]" />
+								<div className="ml-2">
+									<span>Fund Account </span><span className="text-[#0091FF]">Success</span>
+								</div>
+							</div>
+							<span>+1,500 USD</span>
 						</div>
 					</div>
-					{/*  */}
-					<div className="col-span-2 my-8">
-						<div className="flex justify-between mb-8">
+					<div className="col-span-1 mb-4">
+						<div className="flex justify-between mb-3">
 							<h1 className="text-xs uppercase">Beneficiaries</h1>
-							<button className="text-xs text-secondary" onClick={() => navigate(`/dashboard/beneficiaries`)}>
+							<div onClick={addBeneficiary} className="flex items-center cursor-pointer">
+								<img alt="cover" src={imgs.add2} size={24} />
+								<span className="text-black text-[12px] ml-1">Add Beneficiary</span>
+							</div>
+							{/* <button className="text-xs text-secondary" onClick={() => navigate(`/dashboard/beneficiaries`)}>
 								View All
-							</button>
+							</button> */}
 						</div>
-						<div className="flex flex-wrap gap-4 flex-column item-center">
-							<button onClick={addBeneficiary} className="flex items-center h-16 gap-2 px-4 rounded-lg cursor-pointer bg-primary">
-								<img alt="cover" src={add} size={24} />
-								<span className="text-white text-[0.9rem]">Add New</span>
-							</button>
+						<div className="flex flex-wrap gap-4 item-center max-w-[465px]">
 							{beneficiaries?.data?.beneficiary?.map((beneficiary, index) => (
 								<Beneficiary person={beneficiary} refetch={refetchBeneficiaries} key={index} />
 							))}
@@ -118,6 +147,8 @@ const Dashboard = ({ query }) => {
 					</div>
 				</div>
 				<RecentTransactions />
+				
+
 			</DashboardLayout>
 			<SendMoney status={sendMoneyStatus} toggleModal={toggleSendMoney} />
 			<FundAccount status={fundAccountStatus} toggleModal={toggleFundAccount} />
@@ -142,7 +173,7 @@ const RecentTransactions = () => {
 		<div className="mt-12 lg:grid 2xl:grid-cols-2">
 			<div className="my-8">
 				<div className="flex mb-8">
-					<h1 className="text-xs uppercase">Recent Transactions</h1>
+					<h1 className="text-xs">Recent Transactions</h1>
 				</div>
 				<CustomDataTable
 					data={transactions?.data}

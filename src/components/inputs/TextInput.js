@@ -27,9 +27,9 @@ const TextInput = ({
 				<p className="my-2 text-xs font-medium tracking-wider capitalize text-black">{label}</p>
 				{withLink && <ButtonPlain label={withLink} style={{ color: "#B4BAC3" }} onClick={() => navigate("/forgot-password")} />}
 			</div>
-			<div className="relative">
+			<div className="relative flex items-center">
 				{withIcon && (
-					<div className="absolute w-6 h-6 inset-2 left-3">
+					<div className="absolute w-6 h-6 inset-2 left-3 flex items-center mt-1">
 						<img alt="" src={icon} className="rounded-full" />
 					</div>
 				)}
@@ -37,7 +37,7 @@ const TextInput = ({
 					placeholder={placeholder ? placeholder : `${label}`}
 					className={`w-full h-12 border border-bg-blue-100 rounded-8 text-sm 
             ${inputType === "password" ? "tracking-widest" : "tracking-wide"}
-            ${withIcon ? "pl-12" : ""}
+            ${withIcon ? "pl-10" : ""}
             px-4 outline-none focus:ring-1 focus:ring-primary border-[#a9abae]`}
 					type={inputType === "password" ? (showXters ? "text" : "password") : inputType}
 					onChange={onChange}

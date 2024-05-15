@@ -13,6 +13,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getConversionRates } from "../../../server";
 import { useAuthContext } from "../../../context/AuthContext";
 import CurrencyCard from "../../cards/CurrencyCard";
+import { imgs } from "../../../helpers/constants";
 
 const sources = [
 	{ key: "USD", label: "US Dollars", icon: usa },
@@ -76,7 +77,10 @@ export default function StepOne({ toggleModal, updateStep, reset }) {
 
 				return (
 					<form className="px-2 bg-white flex flex-col gap-[5px]" onSubmit={handleSubmit}>
-						<h5 className="text-xl font-medium text-grey-title">Fund Wallet</h5>
+						<div className="flex items-center">
+							<img alt="cover" src={imgs.add3} size={24} />
+							<h5 className="text-xl font-medium text-grey-title ml-2">Fund Wallet</h5>
+						</div>
 						<p className="mb-6 text-sm leading-7 text-grey-title">Fund your wallet in a few easy steps</p>
 						<div className="grid min-[425px]:grid-cols-2 gap-2">
 							{wallets
@@ -135,9 +139,9 @@ export default function StepOne({ toggleModal, updateStep, reset }) {
 							type="number"
 							required
 						/>
-						<div className="flex items-center w-full my-8 space-between gap-x-4">
-							<SecondaryBtn placeholder="Cancel" style={{ width: "50%" }} onClick={() => closeModal()} type="button" />
-							<PrimaryBtn placeholder="Continue" style={{ width: "50%", height: "2.5rem" }} type="submit" />
+						<div className="w-full my-4 space-between gap-x-4">
+							<PrimaryBtn placeholder="Continue" style={{ width: "100%", height: "50px", backgroundColor: "#0091FF", color: "#ffffff", }} type="submit" />
+							<SecondaryBtn placeholder="Cancel" style={{ width: "100%", marginTop: 10, border: "none" }} onClick={() => closeModal()} type="button" />
 						</div>
 					</form>
 				);

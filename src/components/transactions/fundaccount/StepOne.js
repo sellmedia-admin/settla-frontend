@@ -6,6 +6,7 @@ import naira from "../../../assets/svg/nigeria.svg";
 import PrimaryBtn from "../../buttons/PrimaryBtn";
 import SecondaryBtn from "../../buttons/SecondaryBtn";
 import TextInput from "../../inputs/TextInput";
+import { imgs } from "../../../helpers/constants";
 import { ErrorMessage, Formik } from "formik";
 import * as Yup from "yup";
 import { useFundContext } from ".";
@@ -52,8 +53,11 @@ export default function StepOne({ toggleModal, updateStep }) {
 		>
 			{({ values, handleChange, handleSubmit, setFieldValue }) => (
 				<form className="px-2 bg-white" onSubmit={handleSubmit}>
-					<h5 className="text-xl font-medium text-grey-title">Fund Account</h5>
-					<p className="mb-6 text-sm leading-7 text-grey-title">Fund your account in a few easy steps</p>
+					<div className="flex items-center">
+						<img alt="cover" src={imgs.add3} size={24} />
+						<h5 className="text-xl font-medium text-grey-title ml-2">Fund Account</h5>
+					</div>
+					<p className="mb-6 text-sm leading-7 text-grey-title">Fund account in naira</p>
 					<TextInput
 						label="Enter amount in Dollars"
 						placeholder="Enter amount in Dollars"
@@ -87,9 +91,9 @@ export default function StepOne({ toggleModal, updateStep }) {
 						required
 					/>
 					<ErrorMessage name="naira" component="div" className="text-red-500 text-[0.75rem]" />
-					<div className="flex items-center w-full my-8 space-between gap-x-4">
-						<SecondaryBtn placeholder="Cancel" style={{ width: "50%" }} onClick={() => toggleModal()} type="button" />
-						<PrimaryBtn placeholder="Continue" style={{ width: "50%", height: "2.5rem" }} type="submit" />
+					<div className="w-full my-4 space-between gap-x-4">
+						<PrimaryBtn placeholder="Continue" style={{ width: "100%", backgroundColor: "#0091FF", color: "#ffffff", height: "50px" }} type="submit" />
+						<SecondaryBtn placeholder="Cancel" style={{ width: "100%", marginTop: 10, border: "none" }} onClick={() => toggleModal()} type="button" />
 					</div>
 				</form>
 			)}

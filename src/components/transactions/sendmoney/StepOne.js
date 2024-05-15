@@ -12,6 +12,7 @@ import * as Yup from "yup";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { getConversionRates, initializeLocalTransfer, initializeTransfer } from "../../../server";
 import SelectInput from "../../inputs/SelectInput";
+import { imgs } from "../../../helpers/constants";
 
 const sources = [
 	{ key: "USD", label: "US Dollars", icon: usa },
@@ -104,8 +105,11 @@ export default function StepOne({ toggleModal, updateStep, reset, beneficiary, e
 
 				return (
 					<form className="px-2 bg-white flex flex-col gap-[5px]" onSubmit={handleSubmit}>
-						<h5 className="text-xl font-medium text-grey-title">Send Money</h5>
-						<p className="mb-6 text-sm leading-7 text-grey-title">Send money in a few easy steps</p>
+						<div className="flex items-center">
+							<img src={imgs.payout} alt="icon" />
+							<h5 className="text-xl font-medium text-grey-title ml-2">Instant Payout</h5>
+						</div>
+						<p className="mb-6 text-sm leading-7 text-grey-title">Make payout in a few easy steps</p>
 						<div className="grid min-[425px]:grid-cols-2 gap-2">
 							<div>
 								<SelectInput
@@ -182,15 +186,15 @@ export default function StepOne({ toggleModal, updateStep, reset, beneficiary, e
 							type="number"
 							required
 						/>
-						<div className="flex items-center w-full my-8 space-between gap-x-4">
-							<SecondaryBtn placeholder="Cancel" style={{ width: "50%" }} onClick={() => closeModal()} type="button" />
+						<div className="w-full my-4 space-between gap-x-4">
 							<PrimaryBtn
 								placeholder="Continue"
-								style={{ width: "50%", height: "2.5rem" }}
+								style={{ width: "100%", height: "50px" }}
 								type="submit"
 								loading={initializeForeignLoading || initializeLocalLoading}
 								disabled={initializeForeignLoading || initializeLocalLoading}
 							/>
+							<SecondaryBtn placeholder="Cancel" style={{ width: "100%", marginTop: 10, border: "none" }} onClick={() => closeModal()} type="button" />
 						</div>
 					</form>
 				);

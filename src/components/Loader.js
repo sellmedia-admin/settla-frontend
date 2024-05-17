@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../assets/png/logo.png";
+import { imgs } from "../helpers/constants";
 
 const Loader = ({ full }) => {
 	return (
 		<div className={`flex items-center justify-center w-full animate-pulse ${full && "min-h-screen"}`}>
-			<img alt="" src={logo} className="w-[150px] aspect-square" />
+			<img alt="" src={imgs.logo} className="w-[150px] aspect-square" />
 		</div>
 	);
 };

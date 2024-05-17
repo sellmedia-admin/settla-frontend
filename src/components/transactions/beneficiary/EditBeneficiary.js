@@ -115,16 +115,16 @@ const LocalBeneficiary = ({ toggleModal, refetch, beneficiary }) => {
 					<ErrorMessage name="alias" component="div" className="text-red-500" />
 					<VerifyAccount />
 					<ErrorMessage name="name" component="div" className="text-red-500" />
-					<div className="flex items-center w-full my-8 space-between gap-x-4">
-						<SecondaryBtn type="button" placeholder="Cancel" style={{ width: "50%" }} onClick={() => toggleModal()} />
+					<div className="w-full my-8 space-between gap-x-4">
 						<PrimaryBtn
 							type="button"
 							placeholder="Save"
-							style={{ width: "50%", height: "2.5rem" }}
+							style={{ width: "100%", backgroundColor: "#0091FF", color: "#ffffff", height: "50px" }}
 							disabled={mutateLoading}
 							loading={mutateLoading}
 							onClick={() => submitForm()}
 						/>
+						<SecondaryBtn type="button" placeholder="Cancel" style={{ width: "100%", marginTop: 10, border: "none" }} onClick={() => toggleModal()} />
 					</div>
 				</form>
 			)}

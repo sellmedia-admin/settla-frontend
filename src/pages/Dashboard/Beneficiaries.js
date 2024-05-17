@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DashboardLayout from "../../components/layouts/DashboardLayout";
-import CustomDataTable from "../../components/CustomDataTable";
+// import CustomDataTable from "../../components/CustomDataTable";
 import { deleteBeneficiary, getBeneficiaries } from "../../server";
 import { renderConfirmDialogue, renderSuccessMessage } from "../../helpers/functions";
 import { useMutation, useQuery } from "@tanstack/react-query";
@@ -9,8 +9,9 @@ import EditBeneficiary from "../../components/transactions/beneficiary/EditBenef
 import SendMoney from "../../components/transactions/sendmoney";
 import Loader from "../../components/Loader";
 import AddBeneficiary from "../../components/transactions/beneficiary/AddBeneficiary";
-import add from "../../assets/svg/add.svg";
 import { DebounceInput } from "react-debounce-input";
+import Beneficiary from "../../components/Beneficiary2";
+import { imgs } from "../../helpers/constants";
 
 const Beneficiaries = () => {
 	const [alias, setAlias] = useState("");
@@ -19,7 +20,7 @@ const Beneficiaries = () => {
 	const addBeneficiary = () => setAddBeneficiary(!addBeneficiaryStatus);
 
 	const {
-		data: beneficiaries,
+		data: beneficiaries, refetch: refetchBeneficiaries,
 		refetch,
 		isLoading,
 	} = useQuery({
@@ -27,52 +28,66 @@ const Beneficiaries = () => {
 		queryFn: () => getBeneficiaries({ searchText: alias }),
 	});
 
-	const columns = [
-		{
-			name: "Beneficiary",
-			selector: (row) => row.name,
-			compact: true,
-			grow: 2,
-		},
-		{
-			name: "Bank",
-			selector: (row) => row.bank_name,
-			compact: true,
-		},
-		{
-			name: "Account Number",
-			selector: (row) => row.account_number,
-			compact: true,
-		},
-		{
-			name: "Action",
-			cell: (row) => <Actions row={row} refetch={refetch} />,
-			compact: true,
-			width: "80px",
-		},
-	];
+	// const columns = [
+	// 	{
+	// 		name: "Beneficiary",
+	// 		selector: (row) => row.name,
+	// 		compact: true,
+	// 		grow: 2,
+	// 	},
+	// 	{
+	// 		name: "Bank",
+	// 		selector: (row) => row.bank_name,
+	// 		compact: true,
+	// 	},
+	// 	{
+	// 		name: "Account Number",
+	// 		selector: (row) => row.account_number,
+	// 		compact: true,
+	// 	},
+	// 	{
+	// 		name: "Action",
+	// 		cell: (row) => <Actions row={row} refetch={refetch} />,
+	// 		compact: true,
+	// 		width: "80px",
+	// 	},
+	// ];
 
 	if (isLoading) return <Loader full />;
+
+	// const { data: beneficiaries, refetch: refetchBeneficiaries } = useQuery({
+	// 	queryKey: ["beneficiaries"],
+	// 	queryFn: () => getBeneficiaries(),
+	// 	suspense: true,
+	// 	enabled: team?.role !== "team",
+	// 	refetchOnWindowFocus: false,
+	// });
 
 	return (
 		<DashboardLayout title="Beneficiaries">
 			<div className="flex items-center justify-between">
 				<DebounceInput
-					className={`w-full h-10 border border-bg-blue-100 rounded text-sm px-4 outline-none focus:ring-1 focus:ring-primary`}
+					className={`w-full h-10 border border-[#DEDEDE] rounded text-sm px-4 outline-none focus:ring-1 focus:ring-primary`}
 					placeholder="Search"
 					name="account_number"
 					debounceTimeout={500}
 					value={alias}
 					onChange={(event) => setAlias(event.target.value)}
-					style={{ backgroundColor: "#f6f7f9", border: "1px solid gray", width: 300 }}
+					style={{ border: "1px solid #DEDEDE", width: 250 }}
 				/>
-				<button onClick={addBeneficiary} className="flex items-center h-12 gap-2 px-4 rounded-lg cursor-pointer bg-primary">
-					<img alt="cover" src={add} size={24} />
-					<span className="text-white text-[0.9rem]">Add New</span>
-				</button>
+				<div onClick={addBeneficiary} className="flex items-center cursor-pointer">
+					<img alt="cover" src={imgs.add2} size={24} />
+					<span className="text-black text-[12px] ml-1">Add Beneficiary</span>
+				</div>
+			</div>
+
+			<div className="flex flex-wrap gap-4 item-center mt-6">
+				{beneficiaries?.data?.beneficiary?.map((beneficiary, index) => (
+					<Beneficiary person={beneficiary} refetch={refetchBeneficiaries} key={index} />
+				))}
 			</div>
 			<div className="overflow-x-scroll">
-				<CustomDataTable data={beneficiaries?.data?.beneficiary} columns={columns} />
+				{/* <CustomDataTable data={beneficiaries?.data?.beneficiary} columns={columns} /> */}
 			</div>
 			<AddBeneficiary status={addBeneficiaryStatus} toggleModal={addBeneficiary} refetch={refetch} />
 		</DashboardLayout>
@@ -90,9 +105,9 @@ const Actions = ({ row, refetch }) => {
 	});
 
 	const confirmAndDelete = (id) =>
-		renderConfirmDialogue().then((result) => {
-			if (result.isConfirmed) deleteMutate(id);
-		});
+	renderConfirmDialogue().then((result) => {
+		if (result.isConfirmed) deleteMutate(id);
+	});
 
 	return (
 		<div className="flex gap-4">

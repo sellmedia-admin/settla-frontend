@@ -48,6 +48,8 @@ import reload from "../assets/images/svg/icons/reload.svg";
 import payout from "../assets/images/svg/icons/payout.svg";
 import receive from "../assets/images/svg/icons/receive.svg";
 import fund from "../assets/images/svg/icons/fund.svg";
+import edit from "../assets/images/svg/icons/edit.svg";
+import delete_ from "../assets/images/svg/icons/delete.svg";
 import minus from "../assets/svg/home/minus.svg";
 
 export const imgs = {
@@ -74,6 +76,8 @@ export const imgs = {
 	payout: payout,
 	receive: receive,
 	fund: fund,
+	edit: edit,
+	delete_: delete_,
 	minus: minus,
 	x: x,
 	linkedin: linkedin,

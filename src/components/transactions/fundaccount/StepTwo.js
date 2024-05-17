@@ -36,7 +36,7 @@ export default function StepTwo({ toggleModal }) {
 				<p className="mb-1 text-base font-medium text-center text-darkGray">{accountName}</p>
 			</div>
 			<div className="flex items-center w-full my-8 space-between gap-x-4">
-				<PrimaryBtn placeholder="I have made payment" style={{ height: "2.5rem" }} onClick={() => toggleModal()} />
+				<PrimaryBtn placeholder="I have made payment" style={{ height: "50px" }} onClick={() => toggleModal()} />
 			</div>
 		</div>
 	);

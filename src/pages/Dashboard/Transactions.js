@@ -74,11 +74,15 @@ const Transactions = () => {
 
 	const clear = () => setSearchParams({});
 
-	const { data } = useQuery({
+	const { 
+		data: transactions 
+	} = useQuery({
 		queryKey: ["transactions", page, per_page, start_date, end_date, selectedCurrency],
 		queryFn: () => getTransactions({ page, limit: per_page, start_date, end_date, ...(!!selectedCurrency && { type: selectedCurrency }) }),
 		suspense: true,
 	});
+
+	if (!transactions?.data?.length) return null;
 
 	return (
 		<DashboardLayout title="Transactions">
@@ -114,7 +118,7 @@ const Transactions = () => {
 				</button>
 			</div>
 			<div className="overflow-x-scroll">
-				<CustomDataTable data={data?.data} columns={transactionColumns} />
+				<CustomDataTable data={transactions?.data} columns={transactionColumns} />
 			</div>
 		</DashboardLayout>
 	);

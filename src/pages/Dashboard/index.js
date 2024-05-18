@@ -98,9 +98,10 @@ const Dashboard = ({ query }) => {
 								</button>
 							</div>
 						</div>
+
 						<h3 className="text-lg mt-8">Recent Transactions</h3>
-						<p className="text-[12px] text-[#979797] mt-0 mb-3">Today, May 8</p>
-						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-3 mb-3">
+						<p className="text-[12px] text-[#979797] mt-0 mb-5">Today, May 8</p>
+						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
 							<div className="flex">
 								<img src={imgs.payout} alt="icon" className="w-[21px]" />
 								<div className="ml-2">
@@ -109,7 +110,7 @@ const Dashboard = ({ query }) => {
 							</div>
 							<span>-2,000 USD</span>
 						</div>
-						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-3 mb-3">
+						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
 							<div className="flex">
 								<img src={imgs.receive} alt="icon" className="w-[21px]" />
 								<div className="ml-2">
@@ -118,7 +119,7 @@ const Dashboard = ({ query }) => {
 							</div>
 							<span>+1,000 USD</span>
 						</div>
-						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-3 mb-3">
+						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
 							<div className="flex">
 								<img src={imgs.fund} alt="icon" className="w-[21px]" />
 								<div className="ml-2">
@@ -176,7 +177,7 @@ const RecentTransactions = () => {
 					<h1 className="text-xs">Recent Transactions</h1>
 				</div>
 				<CustomDataTable
-					data={transactions?.data}
+					data={transactions?.data?.transaction}
 					columns={transactionColumns}
 					pagination={false}
 					onChangePage={() => null}

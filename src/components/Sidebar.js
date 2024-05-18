@@ -9,6 +9,7 @@ import transactions_active from "../assets/svg/transactions-active.svg";
 import transactions_inactive from "../assets/svg/transactions-inactive.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
+import { imgs } from "../helpers/constants";
 
 const Sidebar = () => {
 	const { logout } = useAuthContext();
@@ -28,9 +29,9 @@ const Sidebar = () => {
 
 	return (
 		<aside className="fixed z-[5] flex flex-col items-center w-[200px] h-screen bg-white border border-gray-100 py-14">
-			<h3 className="cursor-pointer text-grey-dark" onClick={() => navigate("/dashboard/")}>
-				Mondu
-			</h3>
+			<div className="cursor-pointer" onClick={() => navigate("/dashboard/")}>
+				<img src={imgs.logo} alt='logo' />
+			</div>
 			<div className="mt-16 space-y-8">
 				<div onClick={() => navigate("/dashboard/")} className="flex items-center space-x-4 cursor-pointer">
 					<img alt="" src={isDashboard ? dashboard_active : dashboard_inactive} size={20} />

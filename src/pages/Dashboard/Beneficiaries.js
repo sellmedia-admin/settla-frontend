@@ -28,30 +28,30 @@ const Beneficiaries = () => {
 		queryFn: () => getBeneficiaries({ searchText: alias }),
 	});
 
-	// const columns = [
-	// 	{
-	// 		name: "Beneficiary",
-	// 		selector: (row) => row.name,
-	// 		compact: true,
-	// 		grow: 2,
-	// 	},
-	// 	{
-	// 		name: "Bank",
-	// 		selector: (row) => row.bank_name,
-	// 		compact: true,
-	// 	},
-	// 	{
-	// 		name: "Account Number",
-	// 		selector: (row) => row.account_number,
-	// 		compact: true,
-	// 	},
-	// 	{
-	// 		name: "Action",
-	// 		cell: (row) => <Actions row={row} refetch={refetch} />,
-	// 		compact: true,
-	// 		width: "80px",
-	// 	},
-	// ];
+	const columns = [
+		{
+			name: "Beneficiary",
+			selector: (row) => row.name,
+			compact: true,
+			grow: 2,
+		},
+		{
+			name: "Bank",
+			selector: (row) => row.bank_name,
+			compact: true,
+		},
+		{
+			name: "Account Number",
+			selector: (row) => row.account_number,
+			compact: true,
+		},
+		{
+			name: "Action",
+			cell: (row) => <Actions row={row} refetch={refetch} />,
+			compact: true,
+			width: "80px",
+		},
+	];
 
 	if (isLoading) return <Loader full />;
 

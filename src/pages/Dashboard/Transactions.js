@@ -14,7 +14,7 @@ export const transactionColumns = [
 	{
 		name: "Date",
 		selector: (row) => row.created_at,
-		// compact: true,
+		compact: true,
 		grow: 1.5,
 	},
 	{
@@ -75,20 +75,21 @@ const Transactions = () => {
 	const clear = () => setSearchParams({});
 
 	const { 
-		data: transactions 
+		data: transactions
 	} = useQuery({
 		queryKey: ["transactions", page, per_page, start_date, end_date, selectedCurrency],
 		queryFn: () => getTransactions({ page, limit: per_page, start_date, end_date, ...(!!selectedCurrency && { type: selectedCurrency }) }),
 		suspense: true,
 	});
+	console.log(transactions);
 
-	if (!transactions?.data?.length) return null;
+	// if (!transactions?.data?.length) return null;
 
 	return (
 		<DashboardLayout title="Transactions">
 			<div className="flex items-end gap-4 mb-4">
 				<Menu as="div" className="relative inline-block text-left">
-					<Menu.Button className="border border-[#a9abae] h-10 rounded-md px-4 bg-[rgba(224, 231, 255, 0.2)]">Date Filter</Menu.Button>
+					<Menu.Button className="border border-[#a9abae] h-12 rounded-md px-4 bg-[rgba(224, 231, 255, 0.2)]">Date Filter</Menu.Button>
 					<Transition
 						as={Fragment}
 						enter="transition ease-out duration-100"
@@ -113,12 +114,12 @@ const Transactions = () => {
 					}}
 					className="min-w-[110px] !bg-transparent"
 				/>
-				<button className="px-4 py-2 m-0 text-white rounded-md btn-form-primary h-fit bg-primary" onClick={clear}>
+				<button className="px-4 py-2 m-0 text-white rounded-md btn-form-primary h-12 bg-primary" onClick={clear}>
 					Clear Filters
 				</button>
 			</div>
 			<div className="overflow-x-scroll">
-				<CustomDataTable data={transactions?.data} columns={transactionColumns} />
+				<CustomDataTable data={transactions?.data?.transaction} columns={transactionColumns} />
 			</div>
 		</DashboardLayout>
 	);

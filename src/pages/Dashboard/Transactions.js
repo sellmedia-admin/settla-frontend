@@ -1,14 +1,15 @@
 import React, { Fragment } from "react";
 import DashboardLayout from "../../components/layouts/DashboardLayout";
 import TableStatus from "../../components/TableStatus";
-import CustomDataTable from "../../components/CustomDataTable";
-import { useQuery } from "@tanstack/react-query";
-import { getTransactions } from "../../server";
+// import CustomDataTable from "../../components/CustomDataTable";
+// import { useQuery } from "@tanstack/react-query";
+// import { getTransactions } from "../../server";
 import { useSearchParams } from "react-router-dom";
 import { renderCurrency } from "../../helpers/functions";
 import SelectInput from "../../components/inputs/SelectInput";
 import { Menu, Transition } from "@headlessui/react";
 import FilterByDate from "../../components/FilterByDate";
+import { imgs } from "../../helpers/constants";
 
 export const transactionColumns = [
 	{
@@ -66,22 +67,21 @@ const currencies = [{ label: "Currency", key: "" }].concat(
 const Transactions = () => {
 	const [searchParams, setSearchParams] = useSearchParams();
 
-	const page = searchParams.get("page") ?? 1;
-	const per_page = searchParams.get("per_page") ?? 20;
-	const start_date = searchParams.get("startDate");
-	const end_date = searchParams.get("endDate");
+	// const page = searchParams.get("page") ?? 1;
+	// const per_page = searchParams.get("per_page") ?? 20;
+	// const start_date = searchParams.get("startDate");
+	// const end_date = searchParams.get("endDate");
 	const selectedCurrency = searchParams.get("type") ?? "";
 
 	const clear = () => setSearchParams({});
 
-	const { 
-		data: transactions
-	} = useQuery({
-		queryKey: ["transactions", page, per_page, start_date, end_date, selectedCurrency],
-		queryFn: () => getTransactions({ page, limit: per_page, start_date, end_date, ...(!!selectedCurrency && { type: selectedCurrency }) }),
-		suspense: true,
-	});
-	console.log(transactions);
+	// const { 
+	// 	data: transactions
+	// } = useQuery({
+	// 	queryKey: ["transactions", page, per_page, start_date, end_date, selectedCurrency],
+	// 	queryFn: () => getTransactions({ page, limit: per_page, start_date, end_date, ...(!!selectedCurrency && { type: selectedCurrency }) }),
+	// 	suspense: true,
+	// });
 
 	// if (!transactions?.data?.length) return null;
 
@@ -119,7 +119,37 @@ const Transactions = () => {
 				</button>
 			</div>
 			<div className="overflow-x-scroll">
-				<CustomDataTable data={transactions?.data?.transaction} columns={transactionColumns} />
+				<div>
+					<p className="text-[12px] text-[#979797] mt-0 mb-5">Today, May 8</p>
+					<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
+						<div className="flex">
+							<img src={imgs.payout} alt="icon" className="w-[21px]" />
+							<div className="ml-2">
+								<span>Payout to </span><span className="font-semibold">Jonathan Doe </span><span className="text-[#0091FF]">Success</span>
+							</div>
+						</div>
+						<span>-2,000 USD</span>
+					</div>
+					<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
+						<div className="flex">
+							<img src={imgs.receive} alt="icon" className="w-[21px]" />
+							<div className="ml-2">
+								<span>Received from </span><span className="font-semibold">John Doe </span><span className="text-[#0091FF]">Receive</span>
+							</div>
+						</div>
+						<span>+1,000 USD</span>
+					</div>
+					<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
+						<div className="flex">
+							<img src={imgs.fund} alt="icon" className="w-[21px]" />
+							<div className="ml-2">
+								<span>Fund Account </span><span className="text-[#0091FF]">Success</span>
+							</div>
+						</div>
+						<span>+1,500 USD</span>
+					</div>
+				</div>
+				{/* <CustomDataTable data={transactions?.data?.transaction} columns={transactionColumns} /> */}
 			</div>
 		</DashboardLayout>
 	);

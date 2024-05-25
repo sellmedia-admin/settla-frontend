@@ -49,6 +49,8 @@ module.exports = {
 			},
 			backgroundImage: {
 				bg: 'url(/src/assets/images/svg/bg.svg)',
+				bgLeft: 'url(/src/assets/images/svg/bg-left.svg)',
+				bgRight: 'url(/src/assets/images/svg/bg-right.svg)',
 				chevronDown: `url(/src/assets/svg/chevron-down.svg)`,
 				blob: `url(/src/assets/svg/home/blob.svg)`,
 			},

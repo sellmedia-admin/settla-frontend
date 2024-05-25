@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import DashboardLayout from "../../components/layouts/DashboardLayout";
 // import CustomDataTable from "../../components/CustomDataTable";
-import { deleteBeneficiary, getBeneficiaries } from "../../server";
-import { renderConfirmDialogue, renderSuccessMessage } from "../../helpers/functions";
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { DeleteIcon, EditIcon, SendIcon } from "../../assets/svg";
-import EditBeneficiary from "../../components/transactions/beneficiary/EditBeneficiary";
-import SendMoney from "../../components/transactions/sendmoney";
+import { getBeneficiaries } from "../../server";
+// import { renderConfirmDialogue, renderSuccessMessage } from "../../helpers/functions";
+import { useQuery } from "@tanstack/react-query";
+// import { DeleteIcon, EditIcon, SendIcon } from "../../assets/svg";
+// import EditBeneficiary from "../../components/transactions/beneficiary/EditBeneficiary";
+// import SendMoney from "../../components/transactions/sendmoney";
 import Loader from "../../components/Loader";
 import AddBeneficiary from "../../components/transactions/beneficiary/AddBeneficiary";
 import { DebounceInput } from "react-debounce-input";
@@ -28,30 +28,30 @@ const Beneficiaries = () => {
 		queryFn: () => getBeneficiaries({ searchText: alias }),
 	});
 
-	const columns = [
-		{
-			name: "Beneficiary",
-			selector: (row) => row.name,
-			compact: true,
-			grow: 2,
-		},
-		{
-			name: "Bank",
-			selector: (row) => row.bank_name,
-			compact: true,
-		},
-		{
-			name: "Account Number",
-			selector: (row) => row.account_number,
-			compact: true,
-		},
-		{
-			name: "Action",
-			cell: (row) => <Actions row={row} refetch={refetch} />,
-			compact: true,
-			width: "80px",
-		},
-	];
+	// const columns = [
+	// 	{
+	// 		name: "Beneficiary",
+	// 		selector: (row) => row.name,
+	// 		compact: true,
+	// 		grow: 2,
+	// 	},
+	// 	{
+	// 		name: "Bank",
+	// 		selector: (row) => row.bank_name,
+	// 		compact: true,
+	// 	},
+	// 	{
+	// 		name: "Account Number",
+	// 		selector: (row) => row.account_number,
+	// 		compact: true,
+	// 	},
+	// 	{
+	// 		name: "Action",
+	// 		cell: (row) => <Actions row={row} refetch={refetch} />,
+	// 		compact: true,
+	// 		width: "80px",
+	// 	},
+	// ];
 
 	if (isLoading) return <Loader full />;
 
@@ -94,46 +94,46 @@ const Beneficiaries = () => {
 	);
 };
 
-const Actions = ({ row, refetch }) => {
-	const [sendMoney, setSendMoney] = useState(false);
-	const [editModalOpen, setEditModalOpen] = useState(false);
-	const toggleModal = () => setEditModalOpen((prevState) => !prevState);
-	const toggleSendModal = () => setSendMoney((prevState) => !prevState);
+// const Actions = ({ row, refetch }) => {
+// 	const [sendMoney, setSendMoney] = useState(false);
+// 	const [editModalOpen, setEditModalOpen] = useState(false);
+// 	const toggleModal = () => setEditModalOpen((prevState) => !prevState);
+// 	const toggleSendModal = () => setSendMoney((prevState) => !prevState);
 
-	const { mutate: deleteMutate } = useMutation(deleteBeneficiary, {
-		onSuccess: ({ message }) => renderSuccessMessage(message).then(() => refetch()),
-	});
+// 	const { mutate: deleteMutate } = useMutation(deleteBeneficiary, {
+// 		onSuccess: ({ message }) => renderSuccessMessage(message).then(() => refetch()),
+// 	});
 
-	const confirmAndDelete = (id) =>
-	renderConfirmDialogue().then((result) => {
-		if (result.isConfirmed) deleteMutate(id);
-	});
+// 	const confirmAndDelete = (id) =>
+// 	renderConfirmDialogue().then((result) => {
+// 		if (result.isConfirmed) deleteMutate(id);
+// 	});
 
-	return (
-		<div className="flex gap-4">
-			<button
-				className="bg-transparent border-0"
-				onClick={() => {
-					toggleSendModal();
-				}}
-			>
-				<SendIcon className="stroke-[#49BCB0]" title="Send Money" />
-			</button>
-			<button
-				className="bg-transparent border-0"
-				onClick={() => {
-					toggleModal();
-				}}
-			>
-				<EditIcon className="stroke-[#49BCB0] fill-[#49BCB0]" title="Edit" />
-			</button>
-			<button className="bg-transparent border-0" onClick={() => confirmAndDelete(row.id)}>
-				<DeleteIcon className="fill-red-500" title="Delete" />
-			</button>
-			<SendMoney status={sendMoney} toggleModal={toggleSendModal} beneficiary={row} />
-			<EditBeneficiary status={editModalOpen} toggleModal={toggleModal} refetch={refetch} beneficiary={row} />
-		</div>
-	);
-};
+// 	return (
+// 		<div className="flex gap-4">
+// 			<button
+// 				className="bg-transparent border-0"
+// 				onClick={() => {
+// 					toggleSendModal();
+// 				}}
+// 			>
+// 				<SendIcon className="stroke-[#49BCB0]" title="Send Money" />
+// 			</button>
+// 			<button
+// 				className="bg-transparent border-0"
+// 				onClick={() => {
+// 					toggleModal();
+// 				}}
+// 			>
+// 				<EditIcon className="stroke-[#49BCB0] fill-[#49BCB0]" title="Edit" />
+// 			</button>
+// 			<button className="bg-transparent border-0" onClick={() => confirmAndDelete(row.id)}>
+// 				<DeleteIcon className="fill-red-500" title="Delete" />
+// 			</button>
+// 			<SendMoney status={sendMoney} toggleModal={toggleSendModal} beneficiary={row} />
+// 			<EditBeneficiary status={editModalOpen} toggleModal={toggleModal} refetch={refetch} beneficiary={row} />
+// 		</div>
+// 	);
+// };
 
 export default Beneficiaries;

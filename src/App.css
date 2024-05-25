@@ -250,7 +250,7 @@ nav ul a:hover {
 
 @media only screen and (min-width: 240px) and (max-width: 767px) {
 	.logo {
-		width: 100px;
+		width: 90px;
 	}
 
 	.nav_links {

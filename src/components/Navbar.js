@@ -1,5 +1,5 @@
-import React, { useContext, Fragment, useState } from "react";
-import Avatar from "boring-avatars";
+import React, { useContext, Fragment, useState, useEffect } from "react";
+// import Avatar from "boring-avatars";
 import { FaChevronDown } from "react-icons/fa";
 import { Menu, Transition } from "@headlessui/react";
 import { FcMenu } from "react-icons/fc";
@@ -8,14 +8,20 @@ import { MiscContext } from "../context/MiscContext";
 import settings from "../assets/svg/settings.svg";
 import information from "../assets/svg/information.svg";
 import signout from "../assets/svg/signout.svg";
-import notifications from "../assets/svg/notifications.svg";
 import profileInactive from "../assets/svg/profile-inactive.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
 import { useQuery } from "@tanstack/react-query";
 import { getNotifications } from "../server";
 import moment from "moment";
 import NotificationsMdal from "./NotificationsMdal";
+import dashboard_active from "../assets/svg/dashboard-active.svg";
+import dashboard_inactive from "../assets/svg/dashboard-inactive.svg";
+import teams_active from "../assets/svg/teams-active.svg";
+import teams_inactive from "../assets/svg/teams-inactive.svg";
+import transactions_active from "../assets/svg/transactions-active.svg";
+import transactions_inactive from "../assets/svg/transactions-inactive.svg";
+import { imgs } from "../helpers/constants";
 
 const Navbar = () => {
 	const {
@@ -24,6 +30,7 @@ const Navbar = () => {
 	} = useContext(MiscContext);
 	const { logout, user } = useAuthContext();
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	const handleSidebar = () => {
 		setSidebar(!showSidebar);
@@ -36,17 +43,46 @@ const Navbar = () => {
 
 	const notificationsArray = data?.data?.data;
 
+	// navigation 
+	const [isDashboard, setIsDashboard] = useState("");
+	const [isTransaction, setIsTransaction] = useState("");
+	const [isBeneficiary, setIsBeneficiary] = useState("");
+
+	useEffect(() => {
+		setIsDashboard(location.pathname === "/dashboard" || location.pathname === "/dashboard/");
+		setIsTransaction(location.pathname.includes("/transactions") ? true : false);
+		setIsBeneficiary(location.pathname.includes("/beneficiaries") ? true : false);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
 	return (
-		<div className="flex justify-between px-4 pt-8 bg-white lg:justify-end lg:px-12">
-			<div>
-				<div className="lg:hidden" onClick={handleSidebar}>
-					<FcMenu className="block w-6 h-6 dark:text-gray-300 hover:text-primary" aria-hidden="true" />
+		<div className="flex justify-between items-center font-outfit px-4 py-4 bg-[#EBFFED] lg:justify-between lg:px-12">
+			<div className="lg:hidden" onClick={handleSidebar}>
+				<FcMenu className="block w-6 h-6 dark:text-gray-300 hover:text-primary" aria-hidden="true" />
+			</div>
+			<div className="cursor-pointer" onClick={() => navigate("/dashboard/")}>
+				<img src={imgs.logo} alt='logo' className="logo" />
+			</div>
+			<div className="hidden md:block lg:block">
+				<div className="flex items-center space-x-4">
+					<div onClick={() => navigate("/dashboard/")} className="flex items-center space-x-4 cursor-pointer">
+						<img alt="" src={isDashboard ? dashboard_active : dashboard_inactive} size={20} />
+						<span className={`${isDashboard ? "text-primary" : "text-gray-500"}`}>Dashboard</span>
+					</div>
+					<div onClick={() => navigate("/dashboard/transactions")} className="flex items-center space-x-4 cursor-pointer">
+						<img alt="" src={isTransaction ? transactions_active : transactions_inactive} size={20} />
+						<span className={`${isTransaction ? "text-primary" : "text-gray-500"}`}>Transactions</span>
+					</div>
+					<div onClick={() => navigate("/dashboard/beneficiaries")} className="flex items-center space-x-4 cursor-pointer">
+						<img alt="" src={isBeneficiary ? teams_active : teams_inactive} size={20} />
+						<span className={`${isBeneficiary ? "text-primary" : "text-gray-500"}`}>Beneficiaries</span>
+					</div>
 				</div>
 			</div>
 			<div className="flex items-center space-x-6">
 				<Menu as="div" className="relative inline-block text-left">
 					<Menu.Button>
-						<img alt="" src={notifications} width={22} />
+						<img alt="bell" src={imgs.notification} width={22} className="mt-2" />
 					</Menu.Button>
 					<Transition
 						as={Fragment}
@@ -71,9 +107,9 @@ const Navbar = () => {
 					</Transition>
 				</Menu>
 				<div className="flex items-center space-x-2">
-					<div className="hidden cursor-pointer sm:inline-block">
+					{/* <div className="hidden cursor-pointer sm:inline-block">
 						<Avatar size={32} name="Amelia Earhart" variant="beam" colors={["#00BCB0", "#5630FF"]} />
-					</div>
+					</div> */}
 					<Menu as="div" className="relative inline-block text-left">
 						<Menu.Button>
 							<div className="flex items-center space-x-1 cursor-pointer">

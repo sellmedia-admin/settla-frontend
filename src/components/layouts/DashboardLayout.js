@@ -22,16 +22,18 @@ const DashboardLayout = ({ title, children, sidebar }) => {
 	};
 
 	return (
-		<>
+		<div className="font-outfit bg-bgLeft bg-contain bg-left bg-no-repeat">
+			<div className="bg-bgRight bg-contain bg-right bg-no-repeat">
 			{showSidebar && (sidebar === "inner" ? <InnerSidebar /> : <Sidebar />)}
 			<Navbar />
-			<main className="lg:ml-[200px] lg:px-4 px-4 bg-white">
+			<main className="lg:mx-[90px] lg:px-4 px-4 bg-white">
 				<h1 className="text-[18px] md:text-[24px]">{title}</h1>
 				<div className="py-3" onClick={hidePanel}>
 					{children}
 				</div>
 			</main>
-		</>
+			</div>
+		</div>
 	);
 };
 

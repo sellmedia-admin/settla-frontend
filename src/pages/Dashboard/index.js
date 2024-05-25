@@ -99,34 +99,36 @@ const Dashboard = ({ query }) => {
 							</div>
 						</div>
 
-						<h3 className="text-lg mt-8">Recent Transactions</h3>
-						<p className="text-[12px] text-[#979797] mt-0 mb-5">Today, May 8</p>
-						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
-							<div className="flex">
-								<img src={imgs.payout} alt="icon" className="w-[21px]" />
-								<div className="ml-2">
-									<span>Payout to </span><span className="font-semibold">Jonathan Doe </span><span className="text-[#0091FF]">Success</span>
+						<div>
+							<h3 className="text-lg mt-8">Recent Transactions</h3>
+							<p className="text-[12px] text-[#979797] mt-0 mb-5">Today, May 8</p>
+							<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
+								<div className="flex">
+									<img src={imgs.payout} alt="icon" className="w-[21px]" />
+									<div className="ml-2">
+										<span>Payout to </span><span className="font-semibold">Jonathan Doe </span><span className="text-[#0091FF]">Success</span>
+									</div>
 								</div>
+								<span>-2,000 USD</span>
 							</div>
-							<span>-2,000 USD</span>
-						</div>
-						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
-							<div className="flex">
-								<img src={imgs.receive} alt="icon" className="w-[21px]" />
-								<div className="ml-2">
-									<span>Received from </span><span className="font-semibold">John Doe </span><span className="text-[#0091FF]">Receive</span>
+							<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
+								<div className="flex">
+									<img src={imgs.receive} alt="icon" className="w-[21px]" />
+									<div className="ml-2">
+										<span>Received from </span><span className="font-semibold">John Doe </span><span className="text-[#0091FF]">Receive</span>
+									</div>
 								</div>
+								<span>+1,000 USD</span>
 							</div>
-							<span>+1,000 USD</span>
-						</div>
-						<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
-							<div className="flex">
-								<img src={imgs.fund} alt="icon" className="w-[21px]" />
-								<div className="ml-2">
-									<span>Fund Account </span><span className="text-[#0091FF]">Success</span>
+							<div className="flex justify-between items-center text-[12px] border-b border-[#EBEBEB] pb-4 mb-4">
+								<div className="flex">
+									<img src={imgs.fund} alt="icon" className="w-[21px]" />
+									<div className="ml-2">
+										<span>Fund Account </span><span className="text-[#0091FF]">Success</span>
+									</div>
 								</div>
+								<span>+1,500 USD</span>
 							</div>
-							<span>+1,500 USD</span>
 						</div>
 					</div>
 					<div className="col-span-1 mb-4">

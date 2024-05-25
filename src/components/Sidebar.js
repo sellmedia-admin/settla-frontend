@@ -28,9 +28,9 @@ const Sidebar = () => {
 	}, []);
 
 	return (
-		<aside className="fixed z-[5] flex flex-col items-center w-[200px] h-screen bg-white border border-gray-100 py-14">
+		<aside className="fixed z-[5] flex flex-col items-center font-outfit w-[200px] lg:hidden md:hidden h-screen bg-white border border-gray-100 py-14">
 			<div className="cursor-pointer" onClick={() => navigate("/dashboard/")}>
-				<img src={imgs.logo} alt='logo' />
+				<img src={imgs.logo} alt='logo' className="logo" />
 			</div>
 			<div className="mt-16 space-y-8">
 				<div onClick={() => navigate("/dashboard/")} className="flex items-center space-x-4 cursor-pointer">

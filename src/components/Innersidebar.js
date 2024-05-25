@@ -10,6 +10,7 @@ import teamsActive from "../assets/svg/teams-active.svg";
 import teamsInactive from "../assets/svg/teams-inactive.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
+import { imgs } from "../helpers/constants";
 
 const InnerSidebar = () => {
 	const { logout } = useAuthContext();
@@ -27,9 +28,9 @@ const InnerSidebar = () => {
 
 	return (
 		<aside className="fixed z-[5] flex flex-col w-[200px] h-screen bg-white border border-gray-100 py-14">
-			<h3 className={`text-grey-dark cursor-pointer ml-10`} onClick={() => navigate("/dashboard/")}>
-				Mondu
-			</h3>
+			<div className="cursor-pointer text-center pl-4" onClick={() => navigate("/dashboard/")}>
+				<img src={imgs.logo} alt='logo' className="logo" />
+			</div>
 			<div className="mt-16 space-y-8">
 				<div className="flex items-start">
 					<div

@@ -34,6 +34,7 @@ import linkedin from "../assets/images/svg/icons/linkedin.svg";
 import facebook from "../assets/images/svg/icons/facebook.svg";
 import instagram from "../assets/images/svg/icons/instagram.svg";
 import messenger from "../assets/images/svg/icons/messenger.svg";
+import notification from "../assets/images/svg/icons/notification.svg";
 import transactionHistory from "../assets/images/png/transaction_history.png";
 
 import nigeria from "../assets/svg/nigeria.svg";
@@ -84,6 +85,7 @@ export const imgs = {
 	facebook: facebook,
 	instagram: instagram,
 	messenger: messenger,
+	notification: notification,
 };
 
 export const constants = {

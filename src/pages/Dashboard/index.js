@@ -150,9 +150,8 @@ const Dashboard = ({ query }) => {
 					</div>
 				</div>
 				<RecentTransactions />
-				
-
 			</DashboardLayout>
+			
 			<SendMoney status={sendMoneyStatus} toggleModal={toggleSendMoney} />
 			<FundAccount status={fundAccountStatus} toggleModal={toggleFundAccount} />
 			<FundWallet status={fundWalletStatus} toggleModal={toggleFundWallet} />

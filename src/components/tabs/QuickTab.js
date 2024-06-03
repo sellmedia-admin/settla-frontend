@@ -10,7 +10,7 @@ const QuickKYBTab = () => {
             <div className="max-w-xl mx-auto">
                 <div className="bg-[#0091FF]/10 md:pt-20 pt-5 px-6 rounded-[10px]">
                     <img
-                        src={imgs.step1}
+                        src={imgs.fundAccount}
                         className="rounded-tl-[20px] rounded-tr-[20px]"
                         width="100%"
                         height="100%"

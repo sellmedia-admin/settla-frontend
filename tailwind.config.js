@@ -13,7 +13,8 @@ module.exports = {
 			colors: {
 				primary: "#16A887",
 				primaryBtn: "#00EE16",
-				secondary: "#5630FF",
+				secondaryBtn: "#5630FF",
+				secondary: "#0091FF",
 				darkGray: "#333333",
 
 				blue: {

@@ -15,7 +15,7 @@ const Signup = () => {
 		<OnboardingLayout title="Sign Up">
 			<div className="max-w-lg px-8 py-16 mx-auto">
 				<h4 className="text-[34px] text-grey-dark">Sign up</h4>
-				<p className="text-blue-offBlue">Tell us about how you want to use Mondu</p>
+				<p className="text-blue-offBlue">Tell us about how you want to use Settla</p>
 
 				<div className="grid grid-cols-2 gap-8 mt-12 mb-6">
 					<Selector

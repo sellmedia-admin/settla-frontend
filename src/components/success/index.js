@@ -23,16 +23,16 @@ export default function SuccessModal({ status, closeModal }) {
 							Hey <span className="font-semibold">{user?.profile?.firstName},</span>
 						</p>
 						<p className="leading-7 text-grey-title">
-							Welcome to Mondu, your account has been succesfully created and you are ready to get started. Mondu is your simple
+							Welcome to Settla, your account has been succesfully created and you are ready to get started. Settla is your simple
 							solution to a secure and seamless cross-border payment service for inbound and outbound money transfers between Nigeria,
 							the U.S, and Canada.
 						</p>
 						<p className="mb-3 leading-7 text-grey-title">
-							Now you are equiped with all you need, but if you need help getting started, contact sales@mondu.io and you'll be up and
+							Now you are equiped with all you need, but if you need help getting started, contact sales@usesettla.com and you'll be up and
 							running in no time.
 						</p>
 
-						<p>The Mondu team.</p>
+						<p>The Settla team.</p>
 						<div className="my-4">
 							<MiniBtn placeholder="Go to dashboard" onClick={closeModal} width="w-full" />
 						</div>

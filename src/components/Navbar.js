@@ -146,8 +146,17 @@ const Navbar = () => {
 									</span>
 								</Menu.Item>
 								<Menu.Item>
+									<span
+										onClick={() => navigate("/dashboard/teams")}
+										className="flex items-center gap-3 px-3 py-4 text-sm cursor-pointer hover:bg-gray-100"
+									>
+										<img alt="" src={settings} className="w-6 h-6" />
+										<span className="text-sm font-medium text-gray-500">Teams settings</span>
+									</span>
+								</Menu.Item>
+								<Menu.Item>
 									<Link
-										to="mailto:support@mondu.io"
+										to="mailto:support@usesettla.com"
 										className="flex items-center gap-3 px-3 py-4 text-sm cursor-pointer hover:bg-gray-100"
 									>
 										<img alt="" src={information} className="w-6 h-6" />

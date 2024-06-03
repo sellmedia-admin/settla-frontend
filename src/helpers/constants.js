@@ -45,6 +45,7 @@ import add from "../assets/svg/home/add.svg";
 import add2 from "../assets/images/svg/icons/add2.svg";
 import add3 from "../assets/images/svg/icons/add3.svg";
 import avatar from "../assets/images/svg/icons/avatar.svg";
+import avatar2 from "../assets/images/svg/icons/avatar2.svg";
 import reload from "../assets/images/svg/icons/reload.svg";
 import payout from "../assets/images/svg/icons/payout.svg";
 import receive from "../assets/images/svg/icons/receive.svg";
@@ -73,6 +74,7 @@ export const imgs = {
 	add2: add2,
 	add3: add3,
 	avatar: avatar,
+	avatar2: avatar2,
 	reload: reload,
 	payout: payout,
 	receive: receive,

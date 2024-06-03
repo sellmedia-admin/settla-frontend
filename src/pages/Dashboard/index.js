@@ -19,8 +19,9 @@ import { useQueries, useQuery } from "@tanstack/react-query";
 import { getBeneficiaries, getTransactions, getWalletBalance } from "../../server";
 // import { useNavigate } from "react-router-dom";
 import CustomDataTable from "../../components/CustomDataTable";
+import numeral from "numeral";
 
-const Dashboard = ({ query }) => {
+const Dashboard = ({ query, amount }) => {
 	const { user: team } = useAuthContext();
 	// const navigate = useNavigate();
 
@@ -58,13 +59,16 @@ const Dashboard = ({ query }) => {
 	const poundWallet = userWallets?.at(2)?.data?.data?.at(0);
 	const arrangedWallet = [nairaWallet, dollarWallet, poundWallet];
 
+	// show account balance 
+	const wallet_value = amount;
+
 	return (
 		<>
 			<DashboardLayout title="Account Overview">
 				<div className="grid gap-4 my-3 sm:grid-cols-2 lg:grid-cols-2">
 					<div className="col-span-1 mb-4 lg:border-r md:border-r border-[#EBEBEB] lg:pr-4">
 						<small className="text-[12px]">Total balance</small>
-						<h3 className="text-gray-800 text-[20px] md:text-[25px]">30,567,100 NGN</h3>
+						<h3 className="text-gray-800 text-[20px] md:text-[25px]">{numeral(wallet_value).format("0,0.00")} NGN</h3>
 						{/* <h3 className="text-gray-800">Hi {loggedInUser?.profile?.firstName}!</h3> */}
 						<div className="grid gap-4 my-5 sm:grid-cols-2 lg:grid-cols-2">
 							{arrangedWallet?.map((currency, index) => (

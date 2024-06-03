@@ -57,38 +57,40 @@ const Teams = () => {
 	});
 
 	return (
-		<DashboardLayout title="Teams" sidebar="inner">
-			<div className="flex flex-col overflow-x-scroll">
-				{isError ? (
-					<button
-						className="flex items-center py-[12px] rounded-lg cursor-pointer bg-primary px-[10px] justify-evenly ml-auto"
-						onClick={toggleCreateModal}
-					>
-						<img alt="cover" src={add} size={24} />
-						<span className="text-white">Create Team</span>
-					</button>
-				) : (
-					<button
-						className="flex items-center py-[12px] rounded-lg cursor-pointer bg-primary px-[10px] justify-evenly ml-auto"
-						onClick={toggleModal}
-					>
-						<img alt="cover" src={add} size={24} />
-						<span className="text-white">Add Member</span>
-					</button>
-				)}
-				<CustomDataTable data={data?.data} columns={columns} />
-			</div>
-			<AddMember status={isMemberOpen} toggleModal={toggleModal} refetch={refetch} />
-			<CreateTeam status={isCreateOpen} toggleModal={toggleCreateModal} refetch={refetch} />
-			<Tooltip anchorSelect=".my-anchor-element" place="top">
-				<div>
-					Level 1: Make Transactions All Forms Of Transactions, View Transaction
-					<br />
-					Level 2. Make Local Transactions (NGN - NGN, NGN Wallet - USD Wallet)
-					<br />
-					Level 3: View Transactions Only
+		<DashboardLayout title="Teams" >
+			<div className="max-w-[900px] mx-auto">
+				<div className="flex flex-col overflow-x-scroll">
+					{isError ? (
+						<button
+							className="flex items-center py-[12px] rounded-lg cursor-pointer bg-primary px-[10px] justify-evenly ml-auto"
+							onClick={toggleCreateModal}
+						>
+							<img alt="cover" src={add} size={24} />
+							<span className="text-white">Create Team</span>
+						</button>
+					) : (
+						<button
+							className="flex items-center py-[12px] rounded-lg cursor-pointer bg-primary px-[10px] justify-evenly ml-auto"
+							onClick={toggleModal}
+						>
+							<img alt="cover" src={add} size={24} />
+							<span className="text-white">Add Member</span>
+						</button>
+					)}
+					<CustomDataTable data={data?.data} columns={columns} />
 				</div>
-			</Tooltip>
+				<AddMember status={isMemberOpen} toggleModal={toggleModal} refetch={refetch} />
+				<CreateTeam status={isCreateOpen} toggleModal={toggleCreateModal} refetch={refetch} />
+				<Tooltip anchorSelect=".my-anchor-element" place="top">
+					<div>
+						Level 1: Make Transactions All Forms Of Transactions, View Transaction
+						<br />
+						Level 2. Make Local Transactions (NGN - NGN, NGN Wallet - USD Wallet)
+						<br />
+						Level 3: View Transactions Only
+					</div>
+				</Tooltip>
+			</div>
 		</DashboardLayout>
 	);
 };

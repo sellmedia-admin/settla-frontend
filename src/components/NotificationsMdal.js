@@ -24,7 +24,7 @@ export default function NotificationsMdal({ status, closeModal, header, body }) 
 						</p>
 						<p className="mb-3 leading-7 text-grey-title">{body}</p>
 
-						<p>The Mondu team.</p>
+						<p>The Settla team.</p>
 						<div className="my-4">
 							<MiniBtn placeholder="Go to dashboard" onClick={closeModal} width="w-full" />
 						</div>

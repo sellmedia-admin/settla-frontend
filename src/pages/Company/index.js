@@ -17,7 +17,8 @@ const AboutCompany = () => {
                 </div>
             </div>
             <div className="md:my-20 my-10">
-                <img
+              <iframe width="100%" height="577px" src="https://www.youtube.com/embed/n8lvuclUrBs?si=yQoHAsnGr2ah3W8J&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                {/* <img
                     src={imgs.store}
                     className=""
                     width="100%"
@@ -25,7 +26,7 @@ const AboutCompany = () => {
                     alt="Settla Preview"
                     layout="responsive"
                     objectFit="contain"
-                />
+                /> */}
                 <p className='mt-2'>Watch this video to know more about us.</p>
             </div>
             <div className='mb-8'>

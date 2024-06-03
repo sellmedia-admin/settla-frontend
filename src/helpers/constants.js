@@ -1,9 +1,17 @@
 import logo from "../assets/images/svg/settla-logo.svg";
 import logoWhite from "../assets/images/svg/settla-logo-white.svg";
+import settlaHero from "../assets/images/jpg/settla-hero.jpg";
+import stepByStep from "../assets/images/jpg/settla-steps-to-settla.jpg";
+import talkToSpecialist from "../assets/images/jpg/settla-talk-to-specialist.jpg";
+import useCaseStudy from "../assets/images/jpg/settla-use-case.jpg";
+import dashboardPage from "../assets/images/jpg/settla-dashboard-page.jpg";
+import step1 from "../assets/images/jpg/settla-step1.jpg";
+import features from "../assets/images/jpg/settla-features.jpg";
+import fundAccount from "../assets/images/jpg/fund-acc-settla.jpg";
+import conversionSettla from "../assets/images/jpg/conversion-settla.jpg";
 import store from "../assets/images/jpg/store-smile-settla.jpg";
 import happy from "../assets/images/jpg/happy-settla.jpg";
 import smile from "../assets/images/jpg/smile-settla.jpg";
-import case1 from "../assets/images/jpg/case1.jpg";
 import cargo from "../assets/images/jpg/cargo.jpg";
 import house from "../assets/images/jpg/house.jpg";
 import handshake from "../assets/images/jpg/handshake.jpg";
@@ -57,6 +65,15 @@ import minus from "../assets/svg/home/minus.svg";
 export const imgs = {
 	logo: logo,
 	logoWhite: logoWhite,
+	settlaHero: settlaHero,
+	stepByStep: stepByStep,
+	talkToSpecialist: talkToSpecialist,
+	useCaseStudy: useCaseStudy,
+	dashboardPage: dashboardPage,
+	step1: step1,
+	features: features,
+	fundAccount: fundAccount,
+	conversionSettla: conversionSettla,
 	store: store,
 	happy: happy,
 	smile: smile,
@@ -104,7 +121,7 @@ export const constants = {
 		{ id: 3, title: 'Instant Payment Processing', subtitle: 'Experience instant payment processing for swift and convenient transactions, anytime, anywhere.' },
 	],
 	caseStudies: [
-		{ id: 1, image: case1, date: 'March 26, 2024', title: 'How Settla Streamlines Procurement and Remittance in Africa', link: '/case-study/case1'},
+		{ id: 1, image: useCaseStudy, date: 'March 26, 2024', title: 'How Settla Streamlines Procurement and Remittance in Africa', link: '/case-study/case1'},
 		{ id: 2, image: cargo, date: 'March 26, 2024', title: 'How Settla is bridging the gap between Naira and other currencies.', link: '/case-study/case1'},
 		{ id: 3, image: house, date: 'March 26, 2024', title: 'How Settla is bridging the gap between Naira and other currencies.', link: '/case-study/case1'},
 		{ id: 4, image: handshake, date: 'March 26, 2024', title: 'How Settla is bridging the gap between merchants and supplier', link: '/case-study/case1'},

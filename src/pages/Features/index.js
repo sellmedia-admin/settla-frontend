@@ -10,7 +10,7 @@ const Features = () => {
     <LandingLayout>
         <main className="pt-8 bg-white">
             <div className='max-w-default mx-auto px-4 md:px-0'>
-                <div className="grid items-center content-center my-10 md:grid-cols-2 ">
+                <div className="grid gap-4 items-center content-center my-10 md:grid-cols-2 ">
                     <div className="max-w-530 col-span-1">
                         <h2 className="mb-4">Effortless Remittance, B2B Procurement Solutions</h2>
                         <p className="">Effortlessly convert your Nigerian Naira into a diverse array of over 25 global currencies instantly, empowering your business to conduct smooth and efficient cross-border transactions with ease and confidence.</p>
@@ -19,10 +19,10 @@ const Features = () => {
                             <LinkButton2 title="Talk to a specialist" link="mailto:hello@usesettla.com" />
                         </div>
                     </div>
-                    <div className="hidden col-span-1 bg-no-repeat bg-contain md:block bg-blob">
+                    <div className="col-span-1">
                         <div className="max-w-462 ml-auto">
                             <img
-                                src={imgs.transactionHistory}
+                                src={imgs.features}
                                 className=""
                                 width="100%"
                                 height="100%"
@@ -34,18 +34,20 @@ const Features = () => {
                     </div>
                 </div>
 
-                <div className="grid items-end content-center my-20 md:grid-cols-2">
-                    <div className="hidden col-span-1 bg-no-repeat bg-contain md:block bg-blob">
+                <div className="grid gap-4 items-end content-center my-20 md:grid-cols-2">
+                    <div className="col-span-1">
                         <div className="max-w-544 mx-auto">
+                            <div className="bg-[#0091FF]/20 md:pt-20 pt-5 px-6 rounded-[10px]">
                             <img
-                                src={imgs.transactionHistory}
-                                className=""
+                                src={imgs.fundAccount}
+                                className="rounded-tl-[20px] rounded-tr-[20px]"
                                 width="100%"
                                 height="100%"
                                 alt="Preview"
                                 layout="responsive"
                                 objectFit="contain"
                             />
+                            </div>
                         </div>
                     </div>
                     <div className="max-w-473 col-span-1 mx-auto mb-8">
@@ -54,39 +56,43 @@ const Features = () => {
                     </div>
                 </div>
 
-                <div className="grid items-end content-center my-20 md:grid-cols-2 ">
+                <div className="grid gap-4 items-end content-center my-20 md:grid-cols-2 ">
                     <div className="max-w-473 col-span-1">
                         <h3 className="mb-4">Convert NGN to foreign currencies</h3>
                         <div className='mb-4'><img src={imgs.flags2} alt='flags' /></div>
                         <p className="">Settla serves as your reliable ally for B2B enterprises across Africa and worldwide, providing effortless currency conversion solutions. Convert your local currency, Naira (NGN), into over 25 foreign currencies and cryptocurrencies, enabling seamless cross-border transactions. Our comprehensive payment solutions guarantee adaptability and ease, empowering your business to excel in the global marketplace.</p>
                     </div>
-                    <div className="hidden col-span-1 bg-no-repeat bg-contain md:block bg-blob">
-                        <div className="max-w-462 ml-auto">
+                    <div className="col-span-1">
+                        <div className="max-w-544 ml-auto">
+                            <div className="bg-[#0091FF]/20 md:pt-20 pt-5 px-6 rounded-[10px]">
                             <img
-                                src={imgs.transactionHistory}
-                                className=""
+                                src={imgs.conversionSettla}
+                                className="rounded-tl-[20px] rounded-tr-[20px]"
                                 width="100%"
                                 height="100%"
                                 alt="Preview"
                                 layout="responsive"
                                 objectFit="contain"
                             />
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="grid items-end content-center my-20 md:grid-cols-2">
-                    <div className="hidden col-span-1 bg-no-repeat bg-contain md:block bg-blob">
+                <div className="grid gap-4 items-end content-center my-20 md:grid-cols-2">
+                    <div className="col-span-1">
                         <div className="max-w-544 mx-auto">
+                            <div className="bg-[#0091FF]/20 md:pt-20 pt-5 px-6 rounded-[10px]">
                             <img
-                                src={imgs.transactionHistory}
-                                className=""
+                                src={imgs.conversionSettla}
+                                className="rounded-tl-[20px] rounded-tr-[20px]"
                                 width="100%"
                                 height="100%"
                                 alt="Preview"
                                 layout="responsive"
                                 objectFit="contain"
                             />
+                            </div>
                         </div>
                     </div>
                     <div className="max-w-473 col-span-1 mx-auto mb-8">
@@ -98,10 +104,10 @@ const Features = () => {
             <section className="bg-primary text-white">
                 <div className='bg-bg bg-cover bg-no-repeat w-full h-full py-16'>
                     <h2 className="mb-12 text-center text-white">Settla in 3 steps</h2>
-                    <div className="grid content-center px-4 my-8 md:grid-cols-2 max-w-default mx-auto">
+                    <div className="grid gap-4 content-center px-4 my-8 md:grid-cols-2 max-w-default mx-auto">
                         <div className="col-span-1 ">
                             <div className="max-w-544 pb-4">
-                                <img src={imgs.happy} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
+                                <img src={imgs.stepByStep} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
                             </div>
                         </div>
                         <div className="max-w-473 ml-auto col-span-1">

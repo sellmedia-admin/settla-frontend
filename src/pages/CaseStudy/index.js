@@ -21,7 +21,7 @@ const CaseStudy = () => {
                 {constants.caseStudies?.map(item => (
                 <Link to={item.link} key={item.id} className='col-span-1 lg:max-w-249 md:max-w-249 mx-2 my-5 hover:text-primary case'>
                     <div className='rounded-[5px] lg:w-[249px] h-[278px] object-cover overflow-hidden bg-primary mb-3'>
-                        <img src={item.image} alt='case study' className='object-cover w-full rounded-[5px]' />
+                        <img src={item.image} alt='case study' className='object-cover w-full h-full rounded-[5px]' />
                     </div>
                     <div className='hover:text-primary case-texts'>
                         <p className='text-[#717171] text-[14px]'>{item.date}</p>

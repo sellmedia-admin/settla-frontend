@@ -90,7 +90,7 @@ const Contact = () => {
                   <h1 className="">We’re at our best when we hear from you</h1>
                   <div className="max-w-508 mx-auto mt-5">
                       <p className="text-white">
-                          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                          Our account specialists are ready to help you start using Settla, making life easier for you and your partners.
                       </p>
                   </div>
               </div>
@@ -102,7 +102,7 @@ const Contact = () => {
 					<div className="grid content-center px-4 my-8 md:grid-cols-2 max-w-default mx-auto">
 						<div className="col-span-1 ">
 							<div className="max-w-544 pb-4">
-								<img src={imgs.happy} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
+								<img src={imgs.talkToSpecialist} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
 							</div>
 						</div>
 						<div className="max-w-473 ml-auto col-span-1 text-black">
@@ -112,7 +112,7 @@ const Contact = () => {
                 <p>Call us on:</p>
                 <p className='mb-5'><a className='font-semibold' href='tel:+234(0)801 234 567'>+234(0)801 234 567</a>, Monday to Friday between 8.30am and 7pm (WAT).</p>
                 <p>Email us on:</p>
-                <p className='mb-5'><a className='font-bold' href='mailto:support@getsettla.com'>support@getsettla.com</a>, we respond very fast.</p>
+                <p className='mb-5'><a className='font-bold' href='mailto:support@usesettla.com'>support@usesettla.com</a>, we respond very fast.</p>
                 <p>Social Media on:</p>
                 <div className='flex mt-2'>
                   <Link to='#' className='h-[41px] w-[41px] rounded-full flex justify-center items-center bg-primary/10 mr-3'>

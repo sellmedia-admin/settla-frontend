@@ -6,17 +6,19 @@ import LinkButton2 from "../buttons/LinkButton2";
 const PayOutTab = () => {
   return (
     <div className="grid items-center content-center my-10 md:grid-cols-2">
-        <div className="hidden col-span-1 bg-no-repeat bg-contain md:block bg-blob">
+        <div className="col-span-1">
             <div className="max-w-xl mx-auto">
-                <img
-                    src={imgs.transactionHistory}
-                    className=""
-                    width="100%"
-                    height="100%"
-                    alt="Preview"
-                    layout="responsive"
-                    objectFit="contain"
-                />
+                <div className="bg-[#0091FF]/10 md:pt-20 pt-5 px-6 rounded-[10px]">
+                    <img
+                        src={imgs.step1}
+                        className="rounded-tl-[20px] rounded-tr-[20px]"
+                        width="100%"
+                        height="100%"
+                        alt="Preview"
+                        layout="responsive"
+                        objectFit="contain"
+                    />
+                </div>
             </div>
         </div>
         <div className="max-w-md col-span-1 mx-auto">

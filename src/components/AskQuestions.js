@@ -15,7 +15,7 @@ const AskQuestions = () => {
             </div>
             <div className="col-span-1 ">
                 <div className="max-w-544 ml-auto">
-                    <img src={imgs.smile} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
+                    <img src={imgs.talkToSpecialist} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
                 </div>
             </div>
         </div>

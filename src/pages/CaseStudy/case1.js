@@ -16,9 +16,9 @@ const Case1 = () => {
                         <p className='text-[#717171] text-[14px] md:text-[18px]'>March 26, 2024</p>
                     </div>
                 </div>
-                <div className="md:my-20 my-10">
+                <div className="md:my-20 my-10 max-h-[577px] overflow-hidden">
                     <img
-                        src={imgs.store}
+                        src={imgs.useCaseStudy}
                         className=""
                         width="100%"
                         height="100%"

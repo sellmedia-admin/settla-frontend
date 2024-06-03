@@ -49,7 +49,7 @@ const Profile = ({ query }) => {
 
 	return (
 		<DashboardLayout title="Profile" >
-			<div className="max-w-[900px] mx-auto">
+			<div className="max-w-[1000px] ">
 				<Formik initialValues={userInitialValues} validationSchema={userValidationSchema} onSubmit={({ email, ...values }) => userMutate(values)}>
 						{({ values, handleChange, handleSubmit, submitForm, setFieldValue }) => {
 							// const handleAvatarUpload = (upload) => {

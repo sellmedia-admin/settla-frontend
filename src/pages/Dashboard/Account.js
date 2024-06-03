@@ -14,7 +14,7 @@ const Account = () => {
 
 	return (
 		<DashboardLayout title="Account" >
-			<div className="max-w-[900px] mx-auto">
+			<div className="max-w-[1000px]">
 				<div className="grid grid-cols-1 gap-4 md:grid-cols-2">
 					<div className="flex items-start mb-6 flex-start gap-x-4 border border-[#DEDEDE] rounded-[20px] p-5">
 						<div className="w-28 h-28">

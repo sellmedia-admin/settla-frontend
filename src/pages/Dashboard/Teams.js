@@ -58,7 +58,7 @@ const Teams = () => {
 
 	return (
 		<DashboardLayout title="Teams" >
-			<div className="max-w-[900px] mx-auto">
+			<div className="max-w-[1000px] ">
 				<div className="flex flex-col overflow-x-scroll">
 					{isError ? (
 						<button

@@ -9,7 +9,7 @@ const Features = () => {
   return (
     <LandingLayout>
         <main className="pt-8 bg-white">
-            <div className='max-w-default mx-auto px-4 md:px-0'>
+            <div className='max-w-default mx-auto px-4'>
                 <div className="grid gap-4 items-center content-center my-10 md:grid-cols-2 ">
                     <div className="max-w-530 col-span-1">
                         <h2 className="mb-4">Effortless Remittance, B2B Procurement Solutions</h2>

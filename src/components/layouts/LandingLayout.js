@@ -6,7 +6,7 @@ const LandingLayout = ({children}) => {
   return (
     <div className='font-outfit'>
         <div>
-            <nav className="nav_links flex items-center justify-between max-w-default mx-auto px-4 py-6 bg-white md:px-0">
+            <nav className="nav_links flex items-center justify-between max-w-default mx-auto px-4 py-6 bg-white">
 				<div className="flex space-x-2">
 					<Link to="/"><img alt="logo" src={imgs.logo} className="logo" /></Link>
 				</div>

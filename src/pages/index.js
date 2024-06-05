@@ -77,7 +77,6 @@ export default function Home() {
 						<h2 className="mb-10">Create an Account in 3 minutes</h2>
 						{/* tabs component */}
 						<Tabs />
-						
 					</div>
 					
 					<div className="my-28">

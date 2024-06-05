@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const AboutCompany = () => {
   return (
     <LandingLayout>
-      <main className="pt-8 bg-white max-w-default mx-auto px-4 md:px-0">
+      <main className="pt-8 bg-white max-w-default mx-auto px-4">
         <div className="items-center content-center my-8">
             <div className="max-w-760 mx-auto text-center">
                 <h2 className="">About Settla</h2>

@@ -143,7 +143,7 @@ export const caseStudy = {
 	aboutText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi beatae vitae dicta sunt explicabo. ", 
 	challenges: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.", 
 	challenge1Title: "Manual Collaboration:", 
-	challenge1Text: "Sed ut unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ", 
+	challenge1Text: "Sed ut unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, rem aperiam, eaque ipsa quae ab illo inventore veritatis ", 
 	challenge2Title: "Difficulty in Tracking Invoices:", 
 	challenge2Text: "Sed ut unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ", 
 	challenge3Title: "Delayed Payments:", 

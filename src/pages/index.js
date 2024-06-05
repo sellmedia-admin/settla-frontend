@@ -42,7 +42,7 @@ export default function Home() {
 							className="object-contain"
 							width="100%"
 							height="100%"
-							alt="Settla Preview"
+							alt="Settla"
 							layout="responsive"
 						/>
 					</div>
@@ -75,7 +75,7 @@ export default function Home() {
 				<section className="max-w-default mx-auto my-28 px-4">
 					<div className="mb-8 text-center">
 						<h2 className="mb-10">Create an Account in 3 minutes</h2>
-
+						{/* tabs component */}
 						<Tabs />
 						
 					</div>

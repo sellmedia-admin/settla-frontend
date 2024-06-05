@@ -39,12 +39,11 @@ export default function Home() {
 					<div className="max-w-default mx-auto md:my-24 my-10 max-h-[577px] overflow-hidden">
 						<img
 							src={imgs.settlaHero}
-							className=""
+							className="object-contain"
 							width="100%"
 							height="100%"
 							alt="Settla Preview"
 							layout="responsive"
-							objectFit="contain"
 						/>
 					</div>
 				</div>
@@ -96,12 +95,11 @@ export default function Home() {
 							<div className="bg-[#0091FF]/20 md:pt-20 pt-5 px-6 rounded-[10px]">
 								<img
 								src={imgs.dashboardPage}
-								className="rounded-tl-[20px] rounded-tr-[20px]"
+								className="rounded-tl-[20px] rounded-tr-[20px] object-contain"
 								width="100%"
 								height="100%"
 								alt="Settla Preview"
 								layout="responsive"
-								objectFit="contain"
 								/>
 							</div>
 						</div>
@@ -122,7 +120,7 @@ export default function Home() {
 						</div>
 					</div> */}
 					<div className="max-w-md col-span-1 mx-auto py-16">
-						<img src={imgs.flag} width="331px" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
+						<img src={imgs.flag} width="331px" height="100%" alt="Preview" layout="responsive" className='object-contain' />
 					</div>
 				</div>
 
@@ -131,7 +129,7 @@ export default function Home() {
 					<div className="grid content-center px-4 my-8 md:grid-cols-2 max-w-default mx-auto">
 						<div className="col-span-1 ">
 							<div className="max-w-544 pb-4">
-								<img src={imgs.stepByStep} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
+								<img src={imgs.stepByStep} width="100%" height="100%" alt="Preview" layout="responsive" className='object-contain' />
 							</div>
 						</div>
 						<div className="max-w-473 ml-auto col-span-1">

@@ -69,10 +69,9 @@ const Profile = ({ query }) => {
 						{values?.avatar ? (
 							<img
 								src={values?.avatar?.preview}
-								className="w-24 h-24 rounded"
+								className="w-24 h-24 rounded object-cover"
 								width="96px"
 								height="96px"
-								objectFit="cover"
 								alt="cover"
 								objectPosition="top"
 							/>

@@ -102,7 +102,7 @@ const Contact = () => {
 					<div className="grid content-center px-4 my-8 md:grid-cols-2 max-w-default mx-auto">
 						<div className="col-span-1 ">
 							<div className="max-w-544 pb-4">
-								<img src={imgs.stepByStep} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
+								<img src={imgs.stepByStep} width="100%" height="100%" alt="Preview" layout="responsive" className='object-contain' />
 							</div>
 						</div>
 						<div className="max-w-473 ml-auto col-span-1 text-black">

@@ -19,12 +19,11 @@ const Case1 = () => {
                 <div className="md:my-20 my-10 max-h-[577px] overflow-hidden">
                     <img
                         src={imgs.useCaseStudy}
-                        className=""
+                        className="object-contain"
                         width="100%"
                         height="100%"
                         alt="Settla Preview"
                         layout="responsive"
-                        objectFit="contain"
                     />
                 </div>
                 <div className='case_study'>

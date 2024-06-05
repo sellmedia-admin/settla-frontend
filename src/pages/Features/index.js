@@ -23,12 +23,11 @@ const Features = () => {
                         <div className="max-w-462 ml-auto">
                             <img
                                 src={imgs.features}
-                                className=""
+                                className='object-contain'
                                 width="100%"
                                 height="100%"
                                 alt="Preview"
                                 layout="responsive"
-                                objectFit="contain"
                             />
                         </div>
                     </div>
@@ -40,12 +39,11 @@ const Features = () => {
                             <div className="bg-[#0091FF]/20 md:pt-20 pt-5 px-6 rounded-[10px]">
                             <img
                                 src={imgs.fundAccount}
-                                className="rounded-tl-[20px] rounded-tr-[20px]"
+                                className="rounded-tl-[20px] rounded-tr-[20px] object-contain"
                                 width="100%"
                                 height="100%"
                                 alt="Preview"
                                 layout="responsive"
-                                objectFit="contain"
                             />
                             </div>
                         </div>
@@ -67,12 +65,11 @@ const Features = () => {
                             <div className="bg-[#0091FF]/20 md:pt-20 pt-5 px-6 rounded-[10px]">
                             <img
                                 src={imgs.conversionSettla}
-                                className="rounded-tl-[20px] rounded-tr-[20px]"
+                                className="rounded-tl-[20px] rounded-tr-[20px] object-contain"
                                 width="100%"
                                 height="100%"
                                 alt="Preview"
                                 layout="responsive"
-                                objectFit="contain"
                             />
                             </div>
                         </div>
@@ -85,12 +82,11 @@ const Features = () => {
                             <div className="bg-[#0091FF]/20 md:pt-20 pt-5 px-6 rounded-[10px]">
                             <img
                                 src={imgs.conversionSettla}
-                                className="rounded-tl-[20px] rounded-tr-[20px]"
+                                className="rounded-tl-[20px] rounded-tr-[20px] object-contain"
                                 width="100%"
                                 height="100%"
                                 alt="Preview"
                                 layout="responsive"
-                                objectFit="contain"
                             />
                             </div>
                         </div>
@@ -107,7 +103,7 @@ const Features = () => {
                     <div className="grid gap-4 content-center px-4 my-8 md:grid-cols-2 max-w-default mx-auto">
                         <div className="col-span-1 ">
                             <div className="max-w-544 pb-4">
-                                <img src={imgs.stepByStep} width="100%" height="100%" alt="Preview" layout="responsive" objectFit="contain" />
+                                <img src={imgs.stepByStep} width="100%" height="100%" alt="Preview" layout="responsive" className='object-contain' />
                             </div>
                         </div>
                         <div className="max-w-473 ml-auto col-span-1">

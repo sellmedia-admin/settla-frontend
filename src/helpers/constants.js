@@ -23,7 +23,7 @@ import team from "../assets/images/jpg/team.jpg";
 import team1 from "../assets/images/jpg/team1.jpg";
 import team2 from "../assets/images/jpg/team2.jpg";
 import team3 from "../assets/images/jpg/team3.jpg";
-import team4 from "../assets/images/jpg/team4.jpg";
+// import team4 from "../assets/images/jpg/team4.jpg";
 import usd from "../assets/images/png/usd.png";
 import gbp from "../assets/images/png/gbp.png";
 import eur from "../assets/images/png/eur.png";
@@ -131,10 +131,10 @@ export const constants = {
 		{ id: 8, image: student, date: 'March 26, 2024', title: 'How Settla is bridging the gap between Naira and other currencies.', link: '/case-study/case1'},
 	],
 	team: [
-		{ id: 1, image: team1, jd: 'Scrum Master', name: 'Simon Sais', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
-		{ id: 2, image: team2, jd: 'Chief Engineer', name: 'Opa Williams', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
-		{ id: 3, image: team3, jd: 'Compliance Specialist', name: 'Omowunmi Kpapa', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
-		{ id: 4, image: team4, jd: 'Product Designer', name: 'Lizzy Benson', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
+		{ id: 1, image: team1, jd: 'Leadership', name: 'Lekan Oganla', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
+		{ id: 2, image: team2, jd: 'Operations', name: 'Tayewo Osiyemi', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
+		{ id: 3, image: team3, jd: 'Product', name: 'Favour Maduka', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
+		// { id: 4, image: team4, jd: 'Product Designer', name: 'Lizzy Benson', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
 	],
 };
 

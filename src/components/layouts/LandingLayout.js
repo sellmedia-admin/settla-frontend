@@ -4,7 +4,7 @@ import { imgs } from "../../helpers/constants";
 
 const LandingLayout = ({ children }) => {
   return (
-    <div className="font-outfit">
+    <div className="font-Work-sans">
       <div>
         <nav className="nav_links flex items-center justify-between max-w-default mx-auto px-4 py-6 bg-white">
           <div className="flex space-x-2">

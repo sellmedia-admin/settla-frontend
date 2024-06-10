@@ -12,46 +12,86 @@ import { useAuthContext } from "../context/AuthContext";
 import { imgs } from "../helpers/constants";
 
 const Sidebar = () => {
-	const { logout } = useAuthContext();
-	const navigate = useNavigate();
-	const location = useLocation();
+  const { logout } = useAuthContext();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-	const [isDashboard, setIsDashboard] = useState("");
-	const [isTransaction, setIsTransaction] = useState("");
-	const [isBeneficiary, setIsBeneficiary] = useState("");
+  const [isDashboard, setIsDashboard] = useState("");
+  const [isTransaction, setIsTransaction] = useState("");
+  const [isBeneficiary, setIsBeneficiary] = useState("");
 
-	useEffect(() => {
-		setIsDashboard(location.pathname === "/dashboard" || location.pathname === "/dashboard/");
-		setIsTransaction(location.pathname.includes("/transactions") ? true : false);
-		setIsBeneficiary(location.pathname.includes("/beneficiaries") ? true : false);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+  useEffect(() => {
+    setIsDashboard(
+      location.pathname === "/dashboard" || location.pathname === "/dashboard/"
+    );
+    setIsTransaction(
+      location.pathname.includes("/transactions") ? true : false
+    );
+    setIsBeneficiary(
+      location.pathname.includes("/beneficiaries") ? true : false
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-	return (
-		<aside className="fixed z-[5] flex flex-col items-center font-outfit w-[200px] lg:hidden md:hidden h-screen bg-white border border-gray-100 py-14">
-			<div className="cursor-pointer" onClick={() => navigate("/dashboard/")}>
-				<img src={imgs.logo} alt='logo' className="logo" />
-			</div>
-			<div className="mt-16 space-y-8">
-				<div onClick={() => navigate("/dashboard/")} className="flex items-center space-x-4 cursor-pointer">
-					<img alt="" src={isDashboard ? dashboard_active : dashboard_inactive} size={20} />
-					<span className={`${isDashboard ? "text-primary" : "text-gray-500"}`}>Dashboard</span>
-				</div>
-				<div onClick={() => navigate("/dashboard/transactions")} className="flex items-center space-x-4 cursor-pointer">
-					<img alt="" src={isTransaction ? transactions_active : transactions_inactive} size={20} />
-					<span className={`${isTransaction ? "text-primary" : "text-gray-500"}`}>Transactions</span>
-				</div>
-				<div onClick={() => navigate("/dashboard/beneficiaries")} className="flex items-center space-x-4 cursor-pointer">
-					<img alt="" src={isBeneficiary ? teams_active : teams_inactive} size={20} />
-					<span className={`${isBeneficiary ? "text-primary" : "text-gray-500"}`}>Beneficiaries</span>
-				</div>
-			</div>
-			<div onClick={logout} className="flex items-center mt-auto space-x-4 cursor-pointer">
-				<FcExport size={20} className="text-red-500" />
-				<span className={`text-gray-500`}>Sign out</span>
-			</div>
-		</aside>
-	);
+  return (
+    <aside className="fixed z-[5] flex flex-col items-center font-Work-sans w-[200px] lg:hidden md:hidden h-screen bg-white border border-gray-100 py-14">
+      <div className="cursor-pointer" onClick={() => navigate("/dashboard/")}>
+        <img src={imgs.logo} alt="logo" className="logo" />
+      </div>
+      <div className="mt-16 space-y-8">
+        <div
+          onClick={() => navigate("/dashboard/")}
+          className="flex items-center space-x-4 cursor-pointer"
+        >
+          <img
+            alt=""
+            src={isDashboard ? dashboard_active : dashboard_inactive}
+            size={20}
+          />
+          <span className={`${isDashboard ? "text-primary" : "text-gray-500"}`}>
+            Dashboard
+          </span>
+        </div>
+        <div
+          onClick={() => navigate("/dashboard/transactions")}
+          className="flex items-center space-x-4 cursor-pointer"
+        >
+          <img
+            alt=""
+            src={isTransaction ? transactions_active : transactions_inactive}
+            size={20}
+          />
+          <span
+            className={`${isTransaction ? "text-primary" : "text-gray-500"}`}
+          >
+            Transactions
+          </span>
+        </div>
+        <div
+          onClick={() => navigate("/dashboard/beneficiaries")}
+          className="flex items-center space-x-4 cursor-pointer"
+        >
+          <img
+            alt=""
+            src={isBeneficiary ? teams_active : teams_inactive}
+            size={20}
+          />
+          <span
+            className={`${isBeneficiary ? "text-primary" : "text-gray-500"}`}
+          >
+            Beneficiaries
+          </span>
+        </div>
+      </div>
+      <div
+        onClick={logout}
+        className="flex items-center mt-auto space-x-4 cursor-pointer"
+      >
+        <FcExport size={20} className="text-red-500" />
+        <span className={`text-gray-500`}>Sign out</span>
+      </div>
+    </aside>
+  );
 };
 
 export default Sidebar;

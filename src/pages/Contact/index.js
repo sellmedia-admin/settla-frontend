@@ -207,9 +207,9 @@ const Contact = () => {
                     <p>
                       <a
                         className="font-bold"
-                        href="mailto:support@usesettla.com"
+                        href="mailto:hello@usesettla.com"
                       >
-                        support@usesettla.com
+                        hello@usesettla.com
                       </a>
                     </p>
                   </div>

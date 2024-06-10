@@ -238,7 +238,7 @@ export const constants = {
       id: 3,
       image: team3,
       jd: "Product",
-      name: "Favour Maduka",
+      name: "Favour Nduka",
       icon1: x,
       icon2: linkedin,
       icon3: facebook,

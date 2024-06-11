@@ -24,10 +24,10 @@ const CreateTab = () => {
           Create your account to get started with your business transactions
         </h3>
         <p className="">
-          Our streamlined Know Your Business (KYB) process ensures your business
-          is verified swiftly. Upload the necessary documentation, such as your
-          business registration and proof of address. Our team will review and
-          approve your account promptly, ensuring compliance and security.{" "}
+          Start your journey with Settla by creating an account. Simply provide
+          your business details, contact information, and set a secure password.
+          Within minutes, you'll gain access to our platform, designed to
+          streamline your cross-border transactions.{" "}
         </p>
         <div className="flex mt-8">
           <LinkButton title="Create Account" link="/signup" />

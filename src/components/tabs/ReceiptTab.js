@@ -23,10 +23,10 @@ const ReceiptTab = () => {
       <div className="max-w-md col-span-1 mx-auto">
         <h3 className="mb-4">Receipt for your business in 3 minutes</h3>
         <p className="">
-          Need to handle different currencies? No problem. Settla offers
-          competitive exchange rates for currency conversions. Convert your
-          funds into the required currency within the platform, making your
-          international transactions seamless and cost-effective.{" "}
+          Keep track of all your transactions with ease. After each payment,
+          Settla provides detailed receipts and transaction histories. Download
+          or print your receipts for record-keeping and accounting purposes,
+          ensuring transparency and organization for your business.
         </p>
         <div className="flex mt-8">
           <LinkButton title="Create Account" link="/signup" />

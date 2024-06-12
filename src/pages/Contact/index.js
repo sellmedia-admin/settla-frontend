@@ -109,11 +109,11 @@ const Contact = () => {
                     Blog
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/case-study" className="px-2 hover:text-primary">
                     Case Studies
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/contact" className="px-2 hover:text-primary">
                     Contact Us

@@ -20,10 +20,10 @@ import flight from "../assets/images/jpg/flight.jpg";
 import classroom from "../assets/images/jpg/classroom.jpg";
 import student from "../assets/images/jpg/student.jpg";
 import team from "../assets/images/jpg/team.jpg";
-import team1 from "../assets/images/jpg/team1.jpg";
-import team2 from "../assets/images/jpg/team2.jpg";
+import team1 from "../assets/images/jpg/lekan.jpg";
+import team2 from "../assets/images/jpg/taiwo.jpg";
 import team3 from "../assets/images/jpg/team3.jpg";
-// import team4 from "../assets/images/jpg/team4.jpg";
+import team4 from "../assets/images/jpg/team1.jpg";
 import usd from "../assets/images/png/usd.png";
 import gbp from "../assets/images/png/gbp.png";
 import eur from "../assets/images/png/eur.png";
@@ -225,7 +225,7 @@ export const constants = {
     {
       id: 2,
       image: team2,
-      jd: "Operations",
+      jd: "Finance",
       name: "Tayewo Osiyemi",
       icon1: x,
       icon2: linkedin,
@@ -246,7 +246,18 @@ export const constants = {
       link2: "#",
       link3: "#",
     },
-    // { id: 4, image: team4, jd: 'Product Designer', name: 'Lizzy Benson', icon1: x, icon2: linkedin, icon3: facebook, link1: '#', link2: '#', link3: '#'},
+    {
+      id: 4,
+      image: team4,
+      jd: "Global Operations",
+      name: "Mayowa Akanbi",
+      icon1: x,
+      icon2: linkedin,
+      icon3: facebook,
+      link1: "#",
+      link2: "#",
+      link3: "#",
+    },
   ],
 };
 
